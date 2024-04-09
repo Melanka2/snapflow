@@ -6,7 +6,6 @@
 </head>
 <body>
     <h1 class="">Admin</h1>
-    <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
-    <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
+    <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
 </body>
 </html>
