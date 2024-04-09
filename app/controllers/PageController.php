@@ -25,4 +25,9 @@ class PageController extends Controller
     {
         $this->view('pages/signIn');
     }
+    public function admindashboard()
+    {
+        $this->view('pages/admindashboard');
+    }
+
 }
