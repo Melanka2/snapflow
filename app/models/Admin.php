@@ -31,4 +31,19 @@ class Admin implements User{
         }
     }
 
+    public function signIn($data)
+    {
+        $this->db->query('SELECT * FROM users WHERE email = :email AND password = :password');
+        $this->db->bind(':email', $data['email']);
+        $this->db->bind(':password', $data['password']);
+
+        $row = $this->db->single();
+
+        if ($this->db->rowCount() > 0) {
+            return $row;
+        } else {
+            return false;
+        }
+    }
+
 }

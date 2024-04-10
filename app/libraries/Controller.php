@@ -13,12 +13,10 @@ class Controller
         //instantiate model factory
 
         $this->factory = new ModelFactory();
-        // require_once '../app/models/' . $model . '.php';
 
         //get instantiated model
         return $this->factory->getModel($model);
-        //instantiate model
-        // return $model::getInstance();
+
     }
 
     //checks for the view file and load
