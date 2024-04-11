@@ -29,5 +29,10 @@ class PageController extends Controller
     {
         $this->view('pages/admindashboard');
     }
+    public function payment()
+    {
+        $this->view('pages/payment');
+    }
+
 
 }
