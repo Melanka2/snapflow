@@ -34,5 +34,11 @@ class PageController extends Controller
         $this->view('pages/payment');
     }
 
+    public function adminprofile()
+    {
+        $this->view('pages/adminprofile');
+    }
+
+
 
 }

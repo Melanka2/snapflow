@@ -8,7 +8,7 @@
 
 <body>
 
-    <h1 class=""><?php echo $_SESSION["email"] ?></h1>
+    
     <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
 </body>
 <script src="<?php echo URLROOT; ?>/public/js/form.js"></script>

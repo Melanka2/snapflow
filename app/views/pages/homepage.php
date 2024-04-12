@@ -6,6 +6,7 @@
 </head>
 <body>
 
+<img src="<?php echo URLROOT ?>/public/images/logo.png" alt="logo" class="logimg">
 
 <div class="topnav">
   <a class="active" href="#home">Home</a>
@@ -19,14 +20,18 @@
     <div class="log">
     <a href="<?php echo URLROOT ?>/PageController/signup"><button class="Signup">Sign up</button></a>
     <a href="<?php echo URLROOT ?>/PageController/signIn"><button class="Login">Log in</button></a>
-</div>
+</div><br>
 
-<div class="container">
-  <img src="image_2.jpg" alt="baby";>
-  <div class="top-left"><h2>w</h2><h4>e are a photography company, creating memorirs through lens...</h4></div>
-  <div class="centered"><input type="text" placeholder="Search.."></div>
-
-  <h3>Stories</h3>
+<div class="image">
+  <img src="<?php echo URLROOT ?>/public/images/image 3.jpg" alt="girl">
+  <div class="content">
+    <h1>Welcome to SnapFlow</h1>
+    <p><h3>We are a photography company, creating memorirs through lens...</h3></p>
+  </div>
+  <div class="centered">
+    <input type="text" placeholder="Search..">
+  </div>
 </div>
+<h3>Stories</h3>
 </body>
 </html>
