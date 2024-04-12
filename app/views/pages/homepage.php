@@ -28,17 +28,17 @@
     <div class="text-block_2">
     <p><h3>We are a photography company, creating memorirs through lens...</h3></p>
   </div>
+
   <div class="centered">
-    
     <label for="date">Select Date:</label>
     <input type="date" id="date" name="date">
-
     <label for="category">Select Category:</label>
     <select id="category" name="category">
       <option value="Wedding">Wedding</option>
       <option value="Birthday">Birthday</option>
       <option value="Get">Get</option>
       <button type="submit">Search</button>
+</select>
   </div>
 </div>
 
