@@ -7,5 +7,7 @@
 <body>
     <h1 class="">Profile</h1>
     <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
+    
+    
 </body>
 </html>

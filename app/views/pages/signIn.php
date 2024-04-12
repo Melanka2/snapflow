@@ -11,5 +11,6 @@
         <input type="password" name="password" placeholder="Password">
         <button type="submit" name="submitSignin">Login</button>
     </form>
+    <img src="<?php echo URLROOT ?>/public/img/website.jpg" alt="login">
 </body>
 </html>
