@@ -21,8 +21,8 @@
       <a href="#Packages">Packages</a>
     </div>
     <div class="log">
-      <a href="<?php echo URLROOT ?>/PageController/signup"><button class="Signup">Sign up</button></a>
-      <a href="<?php echo URLROOT ?>/PageController/signIn"><button class="Login">Log in</button></a>
+      <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
+      <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
     </div>
   </div>
 
@@ -38,15 +38,16 @@
     </div>
 
     <div class="centered">
-      <label for="date">Select Date:</label>
-      <input type="date" id="date" name="date">
-      <label for="category">Select Category:</label>
-      <select id="category" name="category">
+      <label for="date">Date:</label>
+      <input class="data-input" type="date" id="date" name="date">
+      <label for="category">Category:</label>
+      <select class="select-input" id="category" name="category">
         <option value="Wedding">Wedding</option>
         <option value="Birthday">Birthday</option>
         <option value="Get">Get</option>
-        <button type="submit">Search</button>
+       
       </select>
+       <button class="search-btn" type="submit">Search</button>
     </div>
   </div>
 
