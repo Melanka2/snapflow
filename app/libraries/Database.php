@@ -29,8 +29,17 @@ class Database{
             echo $this->error;
         }
         
-        //when using database search maybe helpful
-        // $this->dbHandler->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+       //want code for check sql file and make table before running the project
+       try{
+            $sql = file_get_contents('../app/data/init.sql');
+            $this->dbHandler->exec($sql);
+        }
+        catch (PDOException $e) {
+            $this->error = $e->getMessage();
+            echo $this->error;
+        }
+
+
     }
 
     //to write qeries
