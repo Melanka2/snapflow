@@ -17,7 +17,7 @@ CREATE TABLE
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
-
+/*mayashi*/
 INSERT IGNORE INTO `user` (`password`, `email`) VALUES
     ( 'password', 'admin@localhost');
 INSERT IGNORE INTO `admin` (`first_name`, `last_name`, `user_id`, `reg_date`) VALUES
