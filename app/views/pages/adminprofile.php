@@ -6,8 +6,17 @@
 </head>
 <body>
 
-   <img src="<?php echo URLROOT ?>/public/images/logo.png" alt="logo">
-    <h5 class="">Admin Profile</h5>
+<div class="topnav">
+    <div class="test">
+      <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
+    </div>
+    <div>
+      <a class="active" href="#home">Home</a>
+      <a href="#Blog">Blog</a>
+      <a href="#About us">About Us</a>
+      <a href="#Packages">Packages</a>
+    </div>
+</div>
     <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
 
 
