@@ -80,45 +80,45 @@ CREATE TABLE
     );
 
 CREATE TABLE
-    IF NOT EXISTS 'booking' (
-        'book_id' int(11) NOT NULL AUTO_INCREMENT,
-        'event_type' varchar(100) NOT NULL DEFAULT '0',
-        'book_date' int(11) NOT NULL DEFAULT '0',
-        'event_date' int(11) NOT NULL DEFAULT '0',
-        'event_id' int(11) NOT NULL DEFAULT '0',
-        PRIMARY KEY ('book_id'),
-        FOREIGN KEY ('')
+    IF NOT EXISTS `booking` (
+        `book_id` int(11) NOT NULL AUTO_INCREMENT,
+        `event_type` varchar(100) NOT NULL DEFAULT '',
+        `book_date` int(11) NOT NULL DEFAULT '0',
+        `event_date` int(11) NOT NULL DEFAULT '0',
+        `event_id` int(11) NOT NULL DEFAULT '0',
+        PRIMARY KEY (`book_id`),
+        KEY `photo_code` (`photo_code`)
     );
 
 CREATE TABLE
-    IF NOT EXISTS 'photo'(
-        'photo_code' int(11) NOT NULL AUTO_INCREMENT,
-        'url' varchar(100) NOT NULL DEFAULT '',
-        'date' int(11) NOT NULL DEFAULT '',
-        'album_code' int(11) NOT NULL DEFAULT '',
-        PRIMARY KEY ('photo_code'),
+    IF NOT EXISTS `photo`(
+        `photo_code` int(11) NOT NULL AUTO_INCREMENT,
+        `url` varchar(100) NOT NULL DEFAULT '',
+        `date` int(11) NOT NULL DEFAULT '0',
+        `album_code` int(11) NOT NULL DEFAULT '0',
+        PRIMARY KEY (`photo_code`),
     );
 
 CREATE TABLE
-    IF NOT EXISTS 'organization'(
-        'organi_id' int(11) NOT NULL AUTO_INCREMENT,
-        'name' varchar(100) NOT NULL DEFAULT '',
-        PRIMARY KEY ('organi_id'),
+    IF NOT EXISTS `organization`(
+        `organi_id` int(11) NOT NULL AUTO_INCREMENT,
+        `name` varchar(100) NOT NULL DEFAULT '',
+        PRIMARY KEY (`organi_id`),
     );
 
 CREATE TABLE
-    IF NOT EXISTS 'package'(
-        'pack_code' int(11) NOT NULL AUTO_INCREMENT,
-        'pack_name' varchar(100) NOT NULL DEFAULT '',
-        'soft_copy_price' int(11) NOT NULL DEFAULT '',
-        'hard_copy_price' int(11) NOT NULL DEFAULT '',
-        PRIMARY KEY ('pack_code'),
+    IF NOT EXISTS `package`(
+        `pack_code` int(11) NOT NULL AUTO_INCREMENT,
+        `pack_name` varchar(100) NOT NULL DEFAULT '',
+        `soft_copy_price` int(11) NOT NULL DEFAULT '0',
+        `hard_copy_price` int(11) NOT NULL DEFAULT '0',
+        PRIMARY KEY (`pack_code`),
     );
 
 CREATE TABLE
-    IF NOT EXISTS 'feedback'(
-        'comment' varchar(100) NOT NULL DEFAULT '',
-        'rate' int(11) NOT NULL DEFAULT '',
+    IF NOT EXISTS `feedback`(
+        `comment` varchar(100) NOT NULL DEFAULT '0',
+        `rate` int(11) NOT NULL DEFAULT '',
     );
 
 
