@@ -29,7 +29,7 @@
   <div class="center">
     <img src="<?php echo URLROOT ?>/public/images/image 3.jpg" alt="girl" width="100%" height="600">
     <div class="text-block_1">
-      <p1><h2>Welcome to</h2><h1>SnapFlow</h1><h2>event photography !</h2></p1>
+      <p1><h2>Welcome to</h2><h1>SnapFlow</h1><h2>Event Photography !</h2></p1>
     </div>
     <div class="text-block_2">
       <p>
