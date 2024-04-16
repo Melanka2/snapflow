@@ -17,6 +17,50 @@ CREATE TABLE
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
+    CREATE TABLE
+    IF NOT EXISTS `manager` (
+        `id` int (11) NOT NULL AUTO_INCREMENT,
+        `first_name` varchar(100) NOT NULL DEFAULT '',
+        `last_name` varchar(100) NOT NULL DEFAULT '',
+        `user_id` int (11) NOT NULL UNIQUE ,
+        `reg_date` int (11) NOT NULL DEFAULT '0', 
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+    );
+
+    CREATE TABLE
+    IF NOT EXISTS `editor` (
+        `id` int (11) NOT NULL AUTO_INCREMENT,
+        `first_name` varchar(100) NOT NULL DEFAULT '',
+        `last_name` varchar(100) NOT NULL DEFAULT '',
+        `user_id` int (11) NOT NULL UNIQUE ,
+        `reg_date` int (11) NOT NULL DEFAULT '0', 
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+    );
+
+    CREATE TABLE
+    IF NOT EXISTS `photographer` (
+        `id` int (11) NOT NULL AUTO_INCREMENT,
+        `first_name` varchar(100) NOT NULL DEFAULT '',
+        `last_name` varchar(100) NOT NULL DEFAULT '',
+        `user_id` int (11) NOT NULL UNIQUE ,
+        `reg_date` int (11) NOT NULL DEFAULT '0', 
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+    );
+
+    CREATE TABLE
+    IF NOT EXISTS `custormer` (
+        `id` int (11) NOT NULL AUTO_INCREMENT,
+        `first_name` varchar(100) NOT NULL DEFAULT '',
+        `last_name` varchar(100) NOT NULL DEFAULT '',
+        `user_id` int (11) NOT NULL UNIQUE ,
+        `reg_date` int (11) NOT NULL DEFAULT '0', 
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+    );
+
 /*mayashi*/
 INSERT IGNORE INTO `user` (`password`, `email`) VALUES
     ( 'password', 'admin@localhost');
@@ -34,3 +78,49 @@ CREATE TABLE
         KEY `user_id` (`user_id`),
         KEY `payment_date` (`payment_date`)
     );
+
+CREATE TABLE
+    IF NOT EXISTS 'booking' (
+        'book_id' int(11) NOT NULL AUTO_INCREMENT,
+        'event_type' varchar(100) NOT NULL DEFAULT '0',
+        'book_date' int(11) NOT NULL DEFAULT '0',
+        'event_date' int(11) NOT NULL DEFAULT '0',
+        'event_id' int(11) NOT NULL DEFAULT '0',
+        PRIMARY KEY ('book_id'),
+        FOREIGN KEY ('')
+    );
+
+CREATE TABLE
+    IF NOT EXISTS 'photo'(
+        'photo_code' int(11) NOT NULL AUTO_INCREMENT,
+        'url' varchar(100) NOT NULL DEFAULT '',
+        'date' int(11) NOT NULL DEFAULT '',
+        'album_code' int(11) NOT NULL DEFAULT '',
+        PRIMARY KEY ('photo_code'),
+    );
+
+CREATE TABLE
+    IF NOT EXISTS 'organization'(
+        'organi_id' int(11) NOT NULL AUTO_INCREMENT,
+        'name' varchar(100) NOT NULL DEFAULT '',
+        PRIMARY KEY ('organi_id'),
+    );
+
+CREATE TABLE
+    IF NOT EXISTS 'package'(
+        'pack_code' int(11) NOT NULL AUTO_INCREMENT,
+        'pack_name' varchar(100) NOT NULL DEFAULT '',
+        'soft_copy_price' int(11) NOT NULL DEFAULT '',
+        'hard_copy_price' int(11) NOT NULL DEFAULT '',
+        PRIMARY KEY ('pack_code'),
+    );
+
+CREATE TABLE
+    IF NOT EXISTS 'feedback'(
+        'comment' varchar(100) NOT NULL DEFAULT '',
+        'rate' int(11) NOT NULL DEFAULT '',
+    );
+
+
+
+  
