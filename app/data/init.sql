@@ -86,8 +86,7 @@ CREATE TABLE
         `book_date` int(11) NOT NULL DEFAULT '0',
         `event_date` int(11) NOT NULL DEFAULT '0',
         `event_id` int(11) NOT NULL DEFAULT '0',
-        PRIMARY KEY (`book_id`),
-        KEY `photo_code` (`photo_code`)
+        PRIMARY KEY (`book_id`)
     );
 
 CREATE TABLE
@@ -96,14 +95,14 @@ CREATE TABLE
         `url` varchar(100) NOT NULL DEFAULT '',
         `date` int(11) NOT NULL DEFAULT '0',
         `album_code` int(11) NOT NULL DEFAULT '0',
-        PRIMARY KEY (`photo_code`),
+        PRIMARY KEY (`photo_code`)
     );
 
 CREATE TABLE
     IF NOT EXISTS `organization`(
         `organi_id` int(11) NOT NULL AUTO_INCREMENT,
         `name` varchar(100) NOT NULL DEFAULT '',
-        PRIMARY KEY (`organi_id`),
+         PRIMARY KEY (`organi_id`)
     );
 
 CREATE TABLE
@@ -112,13 +111,17 @@ CREATE TABLE
         `pack_name` varchar(100) NOT NULL DEFAULT '',
         `soft_copy_price` int(11) NOT NULL DEFAULT '0',
         `hard_copy_price` int(11) NOT NULL DEFAULT '0',
-        PRIMARY KEY (`pack_code`),
+        PRIMARY KEY (`pack_code`)
     );
 
 CREATE TABLE
     IF NOT EXISTS `feedback`(
+        `fd_id` int(11) NOT NULL AUTO_INCREMENT,
         `comment` varchar(100) NOT NULL DEFAULT '0',
-        `rate` int(11) NOT NULL DEFAULT '',
+        `rate` int(11) NOT NULL DEFAULT '0',
+        
+         PRIMARY KEY (`fd_id`)
+
     );
 
 

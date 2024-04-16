@@ -17,8 +17,7 @@
 </div>
     <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
 
-   
+    <script src="<?php echo URLROOT ?>/public/js/admindashboard.js"></script>
 </body>
-<script src="<?php echo URLROOT; ?>/public/js/form.js"></script>
 
 </html>

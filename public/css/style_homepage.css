@@ -1,13 +1,8 @@
 
 body {
+   margin: 0;
+   padding: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('snapflow/public/images/back image.jpg');
-            /* You can adjust background properties like size and position */
-            background-size: cover; /* Adjust as needed */
-            background-position: center; /* Adjust as needed */
-            /* Add any other styles you want for the body */
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
@@ -30,8 +25,9 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #ddd;
+  background-color: #e7b1b1;
   color: rgb(20, 19, 19);
+  border-radius: 20%;
 }
 
 .topnav a.active {
@@ -79,21 +75,21 @@ display: none;
   transform: translate(-50%, -50%);
   text-size-adjust: 100px;
   color: #110832;
-  background-color: rgb(227, 182, 186);
+  background-color: rgb(243, 249, 246);
   padding: 15px;
   border-radius: 8px;
 }
 .data-input{
   margin-right: 10px;
-  color: #1b1a1a;
-  background-color: rgb(243, 205, 228);
+  color: #fffdfd;
+  background-color: rgb(165, 125, 128);
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 25px;
 }
 .select-input{
-  color: #101010;
-  background-color: rgb(243, 205, 228);
+  color: #fcfcfc;
+  background-color: rgb(165, 125, 128);
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 20px;
@@ -189,6 +185,7 @@ display: none;
   padding: 20px;
   border: 1px solid #ccc;
   text-align: center;
+  background-color: #ddf1e8;
 }
 
 .testimonial img {
@@ -200,9 +197,10 @@ display: none;
 
 .testimonial-text {
   font-style: italic;
+  color: #3b1515;
 }
 
-.testimonial-user {
+.testimonial-company {
   font-weight: bold;
 }
 
@@ -216,4 +214,11 @@ display: none;
 
 .contact{
   font-size: smaller;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+.contact-item{
+  padding: 50px;
+}
+
