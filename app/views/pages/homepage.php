@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_homepage.css">
 </head>
@@ -29,7 +29,11 @@
   <div class="center">
     <img src="<?php echo URLROOT ?>/public/images/image 3.jpg" alt="girl" width="100%" height="600">
     <div class="text-block_1">
-      <h2>Welcome to <b>SnapFlow</b> event photography</h2>
+      <p1>
+        <h2>Welcome to</h2>
+        <h1>SnapFlow</h1>
+        <h2>Event Photography !</h2>
+      </p1>
     </div>
     <div class="text-block_2">
       <p>
@@ -45,15 +49,15 @@
         <option value="Wedding">Wedding</option>
         <option value="Birthday">Birthday</option>
         <option value="Get">Get</option>
-       
+
       </select>
-       <button class="search-btn" type="submit">Search</button>
+      <button class="search-btn" type="submit">Search</button>
     </div>
   </div>
 
-  <h2>Stories</h2><br>
+  <h1>Stories</h1><br>
 
-  <div class="row" >
+  <div class="row">
     <div class="column">
       <img src="<?php echo URLROOT ?>/public/images/image4.jpg" alt="wedding">
       <img src="<?php echo URLROOT ?>/public/images/image_2.jpg" alt="rock">
@@ -74,35 +78,69 @@
   </div>
   </div>
 
-  <div class=cent>
-  <h2>Best Rating</h2>
+  <div class="cent">
+    <h1>Best Rating</h1>
 
-  <div class="testimonial-container">
-    <div class="testimonial">
-    <img src="<?php echo URLROOT ?>/public/images/photo1.jpg" alt="User 1">
-        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-        <p class="testimonial-user">- John Doe</p>
+    <div class="testimonial-container">
+      <div class="testimonial">
+        <img src="<?php echo URLROOT ?>/public/images/p1.png" alt="company 1">
+        <p class="testimonial-text">"Best photography,Nice photo editing & Good service..."</p>
+
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p class="testimonial-company">- SHOOT</p>
+      </div>
+      <div class="testimonial">
+        <img src="<?php echo URLROOT ?>/public/images/p2.png" alt="company 2">
+        <p class="testimonial-text">"Best photography,Nice photo editing"</p>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <p class="testimonial-company">- STUDIO </p>
+      </div>
+      <div class="testimonial">
+        <img src="<?php echo URLROOT ?>/public/images/p3.png" alt="company 3">
+        <p class="testimonial-text">"Best photography,Nice photo editing"</p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <p class="testimonial-company">- IPHOTO</p>
+      </div>
+      <div class="testimonial">
+        <img src="<?php echo URLROOT ?>/public/images/p4.png" alt="company 4">
+        <p class="testimonial-text">"Nice photo editing & Good service..."</p>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span>
+        <p class="testimonial-company">- PHOTOO</p>
+      </div>
+      <!-- Add more testimonials as needed -->
     </div>
-    <div class="testimonial">
-        <img src="user2.jpg" alt="User 2">
-        <p class="testimonial-text">"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-        <p class="testimonial-user">- Jane Smith</p>
-    </div>
-    <div class="testimonial">
-        <img src="user1.jpg" alt="User 1">
-        <p class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-        <p class="testimonial-user">- John Doe</p>
-    </div>
-    <div class="testimonial">
-        <img src="user2.jpg" alt="User 2">
-        <p class="testimonial-text">"Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p>
-        <p class="testimonial-user">- Jane Smith</p>
-    </div>
-    <!-- Add more testimonials as needed -->
-</div>
   </div>
 
-<script src="script.js"></script>
+  <h1>Contact Information</h1>
+  <div class="contact">
+    <div class="contact-item"> <img src="<?php echo URLROOT ?>/public/images/phone icon.jpg" alt="icon1" width="50px" height="50px">
+      <h6>+9472638717<h6>
+    </div>
+    <div class="contact-item"> <img src="<?php echo URLROOT ?>/public/images/whatsapp.png" alt="icon2" width="50px" height="50px">
+      <h6>Whatsapp</h6>
+    </div>
+    <div class="contact-item"> <img src="<?php echo URLROOT ?>/public/images/fb.jpg" alt="icon3" width="50px" height="50px">
+      <h6>Facebook</h6>
+    </div>
+
+  </div>
 
 </body>
 

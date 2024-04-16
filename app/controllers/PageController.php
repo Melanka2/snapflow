@@ -39,6 +39,11 @@ class PageController extends Controller
         $this->view('pages/adminprofile');
     }
 
+    public function blog()
+    {
+        $this->view('pages/blog');
+    }
+
 
 
 }
