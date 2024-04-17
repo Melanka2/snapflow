@@ -16,7 +16,7 @@
     <canvas id="myChart"></canvas>
 </div>
     <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="<?php echo URLROOT ?>/public/js/admindashboard.js"></script>
 </body>
 
