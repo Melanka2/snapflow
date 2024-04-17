@@ -30,7 +30,10 @@
       <div class="bar" style="--bar-value:5%;" data-name="Twitter" title="Twitter 5%"></div>
       <div class="bar" style="--bar-value:20%;" data-name="Other" title="Other 20%"></div>    
   </div>
-  <script src="<?php echo URLROOT ?>/public/js/admindashboard.js"></script>
+  
+    <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="<?php echo URLROOT ?>/public/js/admindashboard.js"></script>
 </body>
 
 </html>
