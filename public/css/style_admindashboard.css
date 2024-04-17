@@ -23,3 +23,9 @@ body {
 .sidebar a:hover {
     background-color: #555;
 }
+
+.canvas {
+    border: 1px solid black;
+  }
+
+  

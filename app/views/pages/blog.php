@@ -74,19 +74,19 @@
 
 <div class="mySlides fade">
   <div class="numbertext">1 / 3</div>
-  <img src="<?php echo URLROOT ?>/public/images/image9" alt="wedding 1" style="width:100%">
+  <img src="<?php echo URLROOT ?>/public/images/image9.jpeg" alt="wedding 1" style="width:100%">
   <div class="text">Caption Text</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">2 / 3</div>
-  <img src="<?php echo URLROOT ?>/public/images/image10" alt="wedding 2" style="width:100%">
+  <img src="<?php echo URLROOT ?>/public/images/image10.jpg" alt="wedding 2" style="width:100%">
   <div class="text">Caption Two</div>
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext">3 / 3</div>
-  <img src="<?php echo URLROOT ?>/public/images/image8"  alt="wedding 3" style="width:100%">
+  <img src="<?php echo URLROOT ?>/public/images/image8.jpg"  alt="wedding 3" style="width:100%">
   <div class="text">Caption Three</div>
 </div>
 
@@ -99,6 +99,7 @@
   <span class="dot"></span> 
 </div>
 
-<script src="<?php echo URLROOT ?>/public/js/blog.js"></script>
-    </body>
+   <script src="<?php echo URLROOT ?>/public/js/blog.js"></script>
+    
+</body>
 </html>
