@@ -20,7 +20,7 @@ class Admin implements User{
 
     public function signUp($data)
     {
-        $this->db->query('INSERT INTO users (email, password) VALUES(:email, :password)');
+        $this->db->query('INSERT INTO user (email, password) VALUES(:email, :password)');
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':password', $data['password']);
 
@@ -33,7 +33,7 @@ class Admin implements User{
 
     public function signIn($data)
     {
-        $this->db->query('SELECT * FROM users WHERE email = :email AND password = :password');
+        $this->db->query('SELECT * FROM user WHERE email = :email AND password = :password');
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':password', $data['password']);
 

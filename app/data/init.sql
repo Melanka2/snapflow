@@ -118,8 +118,7 @@ CREATE TABLE
     IF NOT EXISTS `feedback`(
         `fd_id` int(11) NOT NULL AUTO_INCREMENT,
         `comment` varchar(100) NOT NULL DEFAULT '0',
-        `rate` int(11) NOT NULL DEFAULT '0',
-        
+        `rate` int(11) NOT NULL DEFAULT '0',  
          PRIMARY KEY (`fd_id`)
 
     );
