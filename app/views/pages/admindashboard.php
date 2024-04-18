@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
    <meta charset="UTF-8">
@@ -10,14 +10,41 @@
 
 <body>
 
-<h1>Admin Dashboard</h1>
+<div class="topnav">
+    <div class="test">
+      <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
+    </div>
+    <div>
+      <a class="active" href="#home">Home</a>
+      <a href="#Blog">Blog</a>
+      <a href="#About us">About Us</a>
+      <a href="#Packages">Packages</a>
+    </div>
+</div>
 
-<div style="width: 600px;">
+<h1>Admin Dashboard</h1>
+<a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
+
+
+<div style="width: 400px;">
     <canvas id="myChart"></canvas>
 </div>
-    <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
+
+<div style="width: 300px;">
+    <canvas id="myChart1"></canvas>
+</div>
+  
+<div style="width: 400px;">
+    <canvas id="myChart2"></canvas>
+</div>
+  
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="<?php echo URLROOT ?>/public/js/admindashboard.js"></script>
+
+    <script src="<?php echo URLROOT ?>/public/js/barChart.js"></script>
+
+    <script src="<?php echo URLROOT ?>/public/js/pieChart.js"></script>
+
+    <script src="<?php echo URLROOT ?>/public/js/lineChart.js"></script>
 </body>
 
 </html>
