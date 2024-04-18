@@ -7,7 +7,7 @@
 </head>
 
 <body>
- <?php var_dump($data); ?>
+
   <div class="topnav">
     <div class="test">
       <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
