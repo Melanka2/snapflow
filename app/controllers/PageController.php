@@ -3,12 +3,14 @@
 class PageController extends Controller
 {
     var $adminModel;
+    var $organizationController;
 
     public function __construct()
     {
 
 
         $this->adminModel = $this->model('Admin');
+        $this->organizationController = $this->controller('OrganizationController');
     }
 
     public function index()
@@ -41,7 +43,9 @@ class PageController extends Controller
 
     public function blog()
     {
-        $this->view('pages/blog');
+        $organizations = $this->organizationController->getOrganizations();
+        extract($organizations);
+        $this->view('pages/blog', $organizations);
     }
 
 

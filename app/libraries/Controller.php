@@ -19,6 +19,18 @@ class Controller
 
     }
 
+    //load controller
+    public function controller($controller)
+    {
+        //require controller factory
+        require_once '../app/controllers/ControllerFactory.php';
+        //instantiate controller factory
+        $this->factory = new ControllerFactory();
+
+        //get instantiated controller
+        return $this->factory->getController($controller);
+    }
+
     //checks for the view file and load
     public function view($view, $data = [])
     {
