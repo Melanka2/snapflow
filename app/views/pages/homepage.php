@@ -27,7 +27,35 @@
   </div>
 
   <div class="center">
-    <img src="<?php echo URLROOT ?>/public/images/image 3.jpg" alt="girl" width="100%" height="600">
+  <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="<?php echo URLROOT ?>/public/images/image1.1.jpg" alt="wedding 1" width="100%" height="700" >
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="<?php echo URLROOT ?>/public/images/image11.jpg" alt="girl" width="100%" height="700">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <img src="<?php echo URLROOT ?>/public/images/image1.jpg"  alt="wedding 3" width="100%" height="700" >
+  
+</div>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+    
     <div class="text-block_1">
       <p1>
         <h2>Welcome to</h2>
@@ -142,6 +170,7 @@
 
   </div>
 
+  <script src="<?php echo URLROOT ?>/public/js/blog.js"></script>
 </body>
 
 </html>

@@ -10,30 +10,41 @@
 
 <body>
 
+<div class="topnav">
+    <div class="test">
+      <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
+    </div>
+    <div>
+      <a class="active" href="#home">Home</a>
+      <a href="#Blog">Blog</a>
+      <a href="#About us">About Us</a>
+      <a href="#Packages">Packages</a>
+    </div>
+</div>
+
 <h1>Admin Dashboard</h1>
 <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
 
 
-<div style="width: 600px;">
+<div style="width: 400px;">
     <canvas id="myChart"></canvas>
 </div>
 
-<canvas id="myChart" width="400" height="200"></canvas>
-
-<div class="grid">
-      <div class="bar" style="--bar-value:85%;" data-name="Your Blog" title="Your Blog 85%"></div>
-      <div class="bar" style="--bar-value:23%;" data-name="Medium" title="Medium 23%"></div>
-     <div class="bar" style="--bar-value:7%;" data-name="Tumblr" title="Tumblr 7%"></div>
-      <div class="bar" style="--bar-value:38%;" data-name="Facebook" title="Facebook 38%"></div>
-      <div class="bar" style="--bar-value:35%;" data-name="YouTube" title="YouTube 35%"></div>
-      <div class="bar" style="--bar-value:30%;" data-name="LinkedIn" title="LinkedIn 30%"></div>
-      <div class="bar" style="--bar-value:5%;" data-name="Twitter" title="Twitter 5%"></div>
-      <div class="bar" style="--bar-value:20%;" data-name="Other" title="Other 20%"></div>    
-  </div>
+<div style="width: 300px;">
+    <canvas id="myChart1"></canvas>
+</div>
   
-    <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
+<div style="width: 400px;">
+    <canvas id="myChart2"></canvas>
+</div>
+  
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="<?php echo URLROOT ?>/public/js/admindashboard.js"></script>
+
+    <script src="<?php echo URLROOT ?>/public/js/barChart.js"></script>
+
+    <script src="<?php echo URLROOT ?>/public/js/pieChart.js"></script>
+
+    <script src="<?php echo URLROOT ?>/public/js/lineChart.js"></script>
 </body>
 
 </html>

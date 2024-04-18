@@ -95,16 +95,13 @@
   </div>
   <br>
 
-  <div style="text-align:center">
+  <div class="dot text">
     <span class="dot"></span>
     <span class="dot"></span>
     <span class="dot"></span>
   </div>
 
   <script src="<?php echo URLROOT ?>/public/js/blog.js"></script>
-</body>
-
-   
     
 </body>
 </html>
