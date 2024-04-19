@@ -48,7 +48,8 @@ class UserController extends Controller
             if ($this->adminModel->signIn($data)) {
                 session_start();
                 $_SESSION['email'] = $data['email'];
-                $this->view('pages/admindashboard');
+                header('location:' . URLROOT . '/PageController/admindashboard/' . $data['email']);
+          
             };
         }
     }

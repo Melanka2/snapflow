@@ -7,9 +7,6 @@ class PageController extends Controller
 
     public function __construct()
     {
-
-
-        $this->adminModel = $this->model('Admin');
         $this->organizationController = $this->controller('OrganizationController');
     }
 
@@ -27,9 +24,13 @@ class PageController extends Controller
     {
         $this->view('pages/signIn');
     }
-    public function admindashboard()
+    public function admindashboard($data)
     {
-        $this->view('pages/admindashboard');
+        session_start();
+        if (!isset($_SESSION['email'])) {
+            header('Location: ' . URLROOT . '/PageController/login');
+        }
+        $this->view('pages/admindashboard', $data);
     }
     public function payment()
     {
@@ -47,7 +48,4 @@ class PageController extends Controller
         extract($organizations);
         $this->view('pages/blog', $organizations);
     }
-
-
-
 }

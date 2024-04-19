@@ -20,7 +20,6 @@ class Core{
                 unset($url[0]);
             }
         }
-
         //require the controller
         require_once '../app/controllers/' . $this->currentController . '.php';
         $this->currentController = new $this->currentController;
@@ -46,7 +45,9 @@ class Core{
         if(isset($_GET['url'])){
         
             $url = rtrim($_GET['url'], '/');
+           
             $url = filter_var($url, FILTER_SANITIZE_URL);
+           
             $url = explode('/', $url);
             return $url;
         }
