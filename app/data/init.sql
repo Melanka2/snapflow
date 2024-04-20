@@ -88,6 +88,9 @@ CREATE TABLE
         `book_date` int (11) NOT NULL DEFAULT '0',
         `event_date` int (11) NOT NULL DEFAULT '0',
         `event_id` int (11) NOT NULL DEFAULT '0',
+        `photo_code` int(11) NOT NULL UNIQUE ,
+        `payment_id` int(11) NOT NULL UNIQUE ,
+        `pack_code` int(11) NOT NULL UNIQUE ,
         PRIMARY KEY (`book_id`)
     );
 
@@ -104,6 +107,7 @@ CREATE TABLE
     IF NOT EXISTS `organization` (
         `organi_id` int (11) NOT NULL AUTO_INCREMENT,
         `name` varchar(100) NOT NULL DEFAULT '',
+
         PRIMARY KEY (`organi_id`)
     );
 

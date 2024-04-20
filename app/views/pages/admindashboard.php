@@ -37,6 +37,11 @@
 <div style="width: 400px;">
     <canvas id="myChart2"></canvas>
 </div>
+
+<div style="width: 400px;">
+    <canvas id="myChart3"></canvas>
+</div>
+  
   
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -45,6 +50,8 @@
     <script src="<?php echo URLROOT ?>/public/js/pieChart.js"></script>
 
     <script src="<?php echo URLROOT ?>/public/js/lineChart.js"></script>
+
+    <script src="<?php echo URLROOT ?>/public/js/dotLineChart.js"></script>
 </body>
 
 </html>

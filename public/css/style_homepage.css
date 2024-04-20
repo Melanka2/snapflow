@@ -81,15 +81,15 @@ display: none;
 }
 .data-input{
   margin-right: 10px;
-  color: #fffdfd;
-  background-color: rgb(205, 173, 175);
+  color: #c52727;
+  background-color: rgb(244, 224, 225);
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 25px;
 }
 .select-input{
-  color: #fcfcfc;
-  background-color: rgb(157, 199, 188);
+  color: #c23535;
+  background-color: rgb(247, 232, 232);
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 20px;
@@ -108,20 +108,20 @@ display: none;
   top: 50px;
   right: 900px;
   background-color: rgb(200, 155, 142);
-  color: rgb(249, 245, 245);
+  color: rgb(251, 252, 252);
   padding-left: 20px;
   padding-right: 20px;
   font-style: italic;
   width: 40%;
   height: 0px;
-  font-size: larger;
+  font-size: 28px;
 }
 .text-block_2 {
   position: absolute;
   bottom: 20px;
   right: 1000px;
-  background-color: rgb(124, 192, 166);
-  color: rgb(252, 250, 250);
+  background-color: rgb(237, 245, 242);
+  color: rgb(9, 9, 9);
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -218,6 +218,7 @@ display: none;
   align-items: center;
   justify-content: center;
 }
+
 .contact-item{
   padding: 50px;
 }
