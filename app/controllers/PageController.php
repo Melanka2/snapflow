@@ -24,13 +24,13 @@ class PageController extends Controller
     {
         $this->view('pages/signIn');
     }
-    public function admindashboard($data)
+    public function admindashboard()
     {
         session_start();
         if (!isset($_SESSION['email'])) {
             header('Location: ' . URLROOT . '/PageController/login');
         }
-        $this->view('pages/admindashboard', $data);
+        $this->view('pages/admindashboard');
     }
     public function payment()
     {
