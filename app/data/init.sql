@@ -107,7 +107,8 @@ CREATE TABLE
     IF NOT EXISTS `organization` (
         `organi_id` int (11) NOT NULL AUTO_INCREMENT,
         `name` varchar(100) NOT NULL DEFAULT '',
-
+        `description` varchar(100) NOT NULL DEFAULT '',
+        `img_url` varchar(100) NOT NULL DEFAULT '',
         PRIMARY KEY (`organi_id`)
     );
 

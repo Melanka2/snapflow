@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,6 +25,7 @@
 </div>
 
 <h1>Admin Dashboard</h1>
+<?php echo $_SESSION['email']  ?>
 <a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
 
 
