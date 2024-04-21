@@ -11,9 +11,9 @@ class Database{
     private $dbHandler;
     private $error;
 
-    public function __construct(){
-        
-        $conn = 'mysql:host=' . $this->dbHost . ';dbname=' . $this->dbName;
+        public function __construct(){
+        // Connect to MySQL as usual
+        $conn = 'mysql:host=' . $this->dbHost;
 
         $options = array(
             PDO::ATTR_PERSISTENT => true,
@@ -22,24 +22,19 @@ class Database{
 
         try {
             $this->dbHandler = new PDO($conn, $this->dbUser, $this->dbPass, $options);
-        }
-        catch (PDOException $e) {
-
-            $this->error = $e->getMessage();
-            echo $this->error;
-        }
-        
-       //want code for check sql file and make table before running the project
-       try{
-            $sql = file_get_contents('../app/data/init.sql');
-            $this->dbHandler->exec($sql);
-        }
-        catch (PDOException $e) {
+        } catch (PDOException $e) {
             $this->error = $e->getMessage();
             echo $this->error;
         }
 
+        // Check if the database exists, if not, create it
+        $this->createDatabase();
 
+        // Select the database
+        $this->selectDatabase();
+
+        // Create tables if they don't exist
+        $this->createTables();
     }
 
     //to write qeries
@@ -95,11 +90,41 @@ class Database{
     //updates a specific field
     public function updateField(){
         $this->execute();
+        return $this->statement->fetch(PDO::FETCH_OBJ);
     }
 
     public function lastInsertID(){
         $last_id = $this->dbHandler->lastInsertId();
         return $last_id;
+    }
+
+     private function createDatabase() {
+        try {
+            $sql = "CREATE DATABASE IF NOT EXISTS " . $this->dbName;
+            $this->dbHandler->exec($sql);
+        } catch (PDOException $e) {
+            $this->error = $e->getMessage();
+            echo $this->error;
+        }
+    }
+
+    private function selectDatabase() {
+        try {
+            $this->dbHandler->query("USE " . $this->dbName);
+        } catch (PDOException $e) {
+            $this->error = $e->getMessage();
+            echo $this->error;
+        }
+    }
+
+    private function createTables() {
+        try {
+            $sql = file_get_contents('../app/data/init.sql');
+            $this->dbHandler->exec($sql);
+        } catch (PDOException $e) {
+            $this->error = $e->getMessage();
+            echo $this->error;
+        }
     }
 }
 

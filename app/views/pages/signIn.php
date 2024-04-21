@@ -9,8 +9,8 @@
 <body>
     <h1 class="">Login</h1>
     <form method="post" action="<?php echo URLROOT; ?>/UserController/signIn">
-        <input type="text" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
+        <input type="text" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
         <button type="submit" name="submitSignin">Login</button>
     </form>
     <div class='img-cls'>

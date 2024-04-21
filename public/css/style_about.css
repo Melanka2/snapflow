@@ -1,28 +1,22 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+div.a {
+    text-align:center;
 }
-.sidebar {
-    height: 100%;
-    width: 250px;
-    background-color: #333;
-    position: fixed;
+div.b {
+    text-align:left;
 }
-.content {
-    margin-left: 250px; /* Same as sidebar width */
-    padding: 20px;
+div.c {
+    text-align:justify;
 }
-/* Style for sidebar links */
-.sidebar a {
-    display: block;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
+div.d {
+    text-align:justify;
 }
-.sidebar a:hover {
-    background-color: #555;
-}
+
+
+img  {
+    display:block;
+    margin-left:auto;
+    margin-left:auto;
+} 
 
 .topnav {
   
@@ -43,8 +37,9 @@ body {
   }
   
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: #e7b1b1;
     color: rgb(20, 19, 19);
+    border-radius: 20%;
   }
   
   .topnav a.active {
@@ -55,4 +50,3 @@ body {
   } 
 
 
-  

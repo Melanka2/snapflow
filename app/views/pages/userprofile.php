@@ -5,6 +5,21 @@
    <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_userprofile.css">
 </head>
 <body>
+<div class="topnav">
+    <div class="test">
+      <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
+    </div>
+    <div>
+      <a class="active" href="#home">Home</a>
+      <a href="#Blog">Blog</a>
+      <a href="#About us">About Us</a>
+      <a href="#Packages">Packages</a>
+    </div>
+    <div class="log">
+      <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
+      <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
+    </div>
+  </div>
 <section class="profile">
     <div class="profile-bg">
         <div class="profile-info">

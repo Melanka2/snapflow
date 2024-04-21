@@ -11,5 +11,7 @@
         <input type="password" name="password" placeholder="Password">
         <button name="submitSignup" value="submitSignup">Signup</button>
     </form>
+
+<script src="<?php echo URLROOT ?>/public/js/form.js"></script>
 </body>
 </html>

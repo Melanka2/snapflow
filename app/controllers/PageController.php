@@ -39,6 +39,18 @@ class PageController extends Controller
         $this->view('pages/adminprofile');
     }
 
+    public function editorprofile()
+    {
+        $this->view('pages/editorprofile');
+    }
+
+    public function about()
+    {
+        $this->view('pages/about');
+    }
+
+
+
 
 
 }

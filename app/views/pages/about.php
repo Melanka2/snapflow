@@ -19,8 +19,24 @@
         </style> -->
 </head>
 <body>
+<div class="topnav">
+    <div class="test">
+      <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
+    </div>
     <div>
-    <img src="about1.jpeg" alt="collage of couple_wed"  width="600px" height="330px">
+      <a class="active" href="#home">Home</a>
+      <a href="#Blog">Blog</a>
+      <a href="#About us">About Us</a>
+      <a href="#Packages">Packages</a>
+    </div>
+    <div class="log">
+      <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
+      <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
+    </div>
+  </div>
+  
+    <div>
+    <img src="<?php echo URLROOT ?>/public/images/about1.jpg" alt="wedding 1" width="100%" height="700" >
     <img src="about2.jpeg" alt="collage of girls"  width="600px" height="330px">
     <!--<style>
         img  {
