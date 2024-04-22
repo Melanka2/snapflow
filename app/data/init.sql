@@ -3,6 +3,7 @@ CREATE TABLE
         `id` int (11) NOT NULL AUTO_INCREMENT,
         `password` varchar(100) NOT NULL DEFAULT '',
         `email` varchar(100) NOT NULL UNIQUE,
+        `rols` varchar(100) NOT NULL DEFAULT '',
         PRIMARY KEY (`id`)
     );
 
@@ -109,7 +110,11 @@ CREATE TABLE
         `name` varchar(100) NOT NULL DEFAULT '',
         `description` varchar(100) NOT NULL DEFAULT '',
         `img_url` varchar(100) NOT NULL DEFAULT '',
-        PRIMARY KEY (`organi_id`)
+        `feedback_code` int(11) NOT NULL  UNIQUE,
+        `editor_id` int(11) NOT NULL UNIQUE,
+        `photographer_id` int(11) NOT NULL UNIQUE,
+        `manager_id` int(11) NOT NULL UNIQUE,
+         PRIMARY KEY (`organi_id`)
     );
 
 CREATE TABLE
@@ -118,6 +123,7 @@ CREATE TABLE
         `pack_name` varchar(100) NOT NULL DEFAULT '',
         `soft_copy_price` int (11) NOT NULL DEFAULT '0',
         `hard_copy_price` int (11) NOT NULL DEFAULT '0',
+        `packa_code` int(11) NOT NULL UNIQUE,
         PRIMARY KEY (`pack_code`)
     );
 

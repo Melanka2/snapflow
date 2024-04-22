@@ -35,7 +35,9 @@
     <td></td>
     <td></td>
     <td><button class="btn Accept">Accept</button>
-<button class="btn Decline">Decline</button></td>
+<button class="btn Decline">Decline</button>
+<button class="btn Delete">Delete</button>
+</td>
   </tr>
   <tr>
     <td>Eve</td>
@@ -43,7 +45,9 @@
     <td></td>
     <td></td>
     <td><button class="btn Accept">Accept</button>
-<button class="btn Decline">Decline</button></td>
+<button class="btn Decline">Decline</button>
+<button class="btn Delete">Delete</button>
+</td>
   </tr>
   <tr>
     <td>John</td>
@@ -51,7 +55,9 @@
     <td></td>
     <td></td>
     <td><button class="btn Accept">Accept</button>
-<button class="btn Decline">Decline</button></td>
+<button class="btn Decline">Decline</button>
+<button class="btn Delete">Delete</button>
+</td>
   </tr>
   <tr>
     <td>Yutheesh</td>
@@ -59,7 +65,9 @@
     <td></td>
     <td></td>
     <td><button class="btn Accept">Accept</button>
-<button class="btn Decline">Decline</button></td>
+<button class="btn Decline">Decline</button>
+<button class="btn Delete">Delete</button>
+</td>
   </tr>
 </table>
 </body>
