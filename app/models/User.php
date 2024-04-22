@@ -6,7 +6,7 @@ interface User {
 
     public function signIn($data);
 
-  
+    
     
 }
 
