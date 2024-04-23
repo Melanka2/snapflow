@@ -22,24 +22,68 @@
       <a href="#About us">About Us</a>
       <a href="#Packages">Packages</a>
     </div>
+
+    <div class="profile-container">
+        <div class="profile">
+        <img src="<?php echo URLROOT ?>/public/images/user.jpg" alt="user" width="50">
+            <span class="username">John Doe</span>
+            <div class="dropdown-content">
+                <a href="#">Edit Profile</a>
+                <a href="#">Settings</a>
+                <a href="#">Logout</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <h1>Admin Dashboard</h1>
-<?php echo $_SESSION['email']  ?>
-<a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
+<div class="testimonial-container">
+      <div class="testimonial">
+        <img src="<?php echo URLROOT ?>/public/images/p1.png" alt="company 1">
+        <p class="testimonial-company">- Profit </p>
+        <p class="testimonial-text">"Rs."</p> 
+      </div>
 
+      <div class="testimonial">
+        <img src="<?php echo URLROOT ?>/public/images/p2.png" alt="company 2">
+        <p class="testimonial-company">- Payment </p>
+        <p class="testimonial-text">"Rs."</p>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      </div>
 
-<div style="width: 400px;">
-    <canvas id="myChart"></canvas>
-</div>
-
-<div style="width: 300px;">
+    <div style="width: 300px;">
     <canvas id="myChart1"></canvas>
 </div>
   
+</div>
+      </div>
+      <div class="testimonial-container-1">
+      <div class="testimonial">
+        <img src="<?php echo URLROOT ?>/public/images/p3.png" alt="company 3">
+        <p class="testimonial-company">- Sales</p>
+        <p class="testimonial-text">"Rs."</p>
+      </div>
+
+      <div class="testimonial">
+        <img src="<?php echo URLROOT ?>/public/images/p4.png" alt="company 4">
+        <p class="testimonial-company">- Event Retrieval</p>
+        <p class="testimonial-text">"Rs."</p>
+      </div>
+    
+  </div>
+<?php echo $_SESSION['email']  ?>
+<a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
+
+<div class="chart">
+<div style="width: 500px;">
+    <canvas id="myChart"></canvas>
+
+
 <div style="width: 400px;">
     <canvas id="myChart2"></canvas>
 </div>
+</div>
+
   
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -48,6 +92,8 @@
     <script src="<?php echo URLROOT ?>/public/js/pieChart.js"></script>
 
     <script src="<?php echo URLROOT ?>/public/js/lineChart.js"></script>
+
+    
 </body>
 
 </html>
