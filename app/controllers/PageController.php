@@ -39,7 +39,9 @@ class PageController extends Controller
 
     public function adminprofile()
     {
-        $this->view('pages/adminprofile');
+        $organizations = $this->organizationController->getNotAcceptedOrganizations();
+        extract($organizations);
+        $this->view('pages/adminprofile',$organizations);
     }
 
     public function blog()
