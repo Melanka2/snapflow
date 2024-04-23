@@ -64,7 +64,7 @@ class PageController extends Controller
 
     public function packages()
     {
-        $this->view('pages/pkg');
+        $this->view('pages/packages');
     }
 
     public function feedback()
