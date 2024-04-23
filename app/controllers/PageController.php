@@ -39,16 +39,17 @@ class PageController extends Controller
 
     public function adminprofile()
     {
-        $this->view('pages/adminprofile');
+        $organizations = $this->organizationController->getNotAcceptedOrganizations();
+        extract($organizations);
+        $this->view('pages/adminprofile',$organizations);
     }
 
-    public function blog()
+    public function organization()
     {
         $organizations = $this->organizationController->getOrganizations();
         extract($organizations);
-        $this->view('pages/blog', $organizations);
+        $this->view('pages/organization', $organizations);
     }
-<<<<<<< HEAD
     
     public function photographerprofile()
     {
@@ -59,7 +60,7 @@ class PageController extends Controller
     public function managerprofile()
     {
         $this->view('pages/managerprofile');
-=======
+    }
 
     public function packages()
     {
@@ -69,6 +70,9 @@ class PageController extends Controller
     public function feedback()
     {
         $this->view('pages/feedback');
->>>>>>> 8bbcecac8fdda03080474653dd8c36d967366fe1
     }
+
+
+
+   
 }
