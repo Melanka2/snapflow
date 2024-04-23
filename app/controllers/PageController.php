@@ -50,4 +50,14 @@ class PageController extends Controller
         extract($organizations);
         $this->view('pages/blog', $organizations);
     }
+
+    public function packages()
+    {
+        $this->view('pages/pkg');
+    }
+
+    public function feedback()
+    {
+        $this->view('pages/feedback');
+    }
 }
