@@ -16,9 +16,9 @@
     </div>
     <div>
       <a class="active" href="#home">Home</a>
-      <a href="#Blog">Blog</a>
-      <a href="#About us">About Us</a>
-      <a href="#Packages">Packages</a>
+      <a href="<?php echo URLROOT ?>/PageController/blog">Blog</a>
+      <a href="<?php echo URLROOT ?>/PageController/about us">About Us</a>
+      <a href="<?php echo URLROOT ?>/PageController/packages">Packages</a>
     </div>
     <div class="log">
       <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
@@ -170,7 +170,7 @@
 
   </div>
 
-  <script src="<?php echo URLROOT ?>/public/js/blog.js"></script>
+  <script src="<?php echo URLROOT ?>/public/js/organization.js"></script>
 </body>
 
 </html>

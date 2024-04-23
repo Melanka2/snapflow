@@ -3,7 +3,7 @@
 
 <head>
   <title>Blog</title>
-  <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_blog.css">
+  <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_organization.css">
 </head>
 
 <body>
@@ -13,10 +13,10 @@
       <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
     </div>
     <div>
-      <a href="#Home">Home</a>
-      <a class="active" href="#Blog">Blog</a>
-      <a href="#About us">About Us</a>
-      <a href="#Packages">Packages</a>
+      <a href="<?php echo URLROOT ?>/PageController/homepage">Home</a>
+      <a href="<?php echo URLROOT ?>/PageController/blog">Blog</a>
+      <a href="<?php echo URLROOT ?>/PageController/about us">About Us</a>
+      <a href="<?php echo URLROOT ?>/PageController/packages">Packages</a>
     </div>
     <div class="log">
       <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
@@ -75,7 +75,7 @@
     <span class="dot"></span>
   </div>
 
-  <script src="<?php echo URLROOT ?>/public/js/blog.js"></script>
+  <script src="<?php echo URLROOT ?>/public/js/organization.js"></script>
 
 </body>
 
