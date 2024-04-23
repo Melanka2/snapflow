@@ -50,6 +50,18 @@ class PageController extends Controller
         extract($organizations);
         $this->view('pages/blog', $organizations);
     }
+<<<<<<< HEAD
+    
+    public function photographerprofile()
+    {
+        $this->view('pages/photographerprofile');
+    }
+
+     
+    public function managerprofile()
+    {
+        $this->view('pages/managerprofile');
+=======
 
     public function packages()
     {
@@ -59,5 +71,6 @@ class PageController extends Controller
     public function feedback()
     {
         $this->view('pages/feedback');
+>>>>>>> 8bbcecac8fdda03080474653dd8c36d967366fe1
     }
 }
