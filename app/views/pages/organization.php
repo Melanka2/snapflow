@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Blog</title>
+  <title>organization</title>
   <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_organization.css">
 </head>
 

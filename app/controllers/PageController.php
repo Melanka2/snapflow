@@ -37,11 +37,11 @@ class PageController extends Controller
         $this->view('pages/payment');
     }
 
-    public function adminprofile()
+    public function admintable()
     {
         $organizations = $this->organizationController->getNotAcceptedOrganizations();
         extract($organizations);
-        $this->view('pages/adminprofile',$organizations);
+        $this->view('pages/admintable',$organizations);
     }
 
     public function organization()
