@@ -48,4 +48,15 @@ class PageController extends Controller
         extract($organizations);
         $this->view('pages/blog', $organizations);
     }
+    
+    public function photographerprofile()
+    {
+        $this->view('pages/photographerprofile');
+    }
+
+     
+    public function managerprofile()
+    {
+        $this->view('pages/managerprofile');
+    }
 }
