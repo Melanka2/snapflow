@@ -9,23 +9,20 @@
 <body>
     
     <form method="post" action="<?php echo URLROOT; ?>/UserController/signIn">
-
-   <form action="/action_page.php" method="post">
   
-  <img src="<?php echo URLROOT ?>/public/images/log image.jpg" alt="log" width="100%" height="80%">
-
+ 
 <div class="login-container">
-        <form id="login-form">
+    
            
             <div class="input-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" name="email" placeholder="Email">
             </div>
             <div class="input-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" name="password" placeholder="Password">
             </div>
-            <button type="submit">Login</button>
+            <button type="submit" name="submitSignin">Login</button>
         </form>
     </div>
     
@@ -33,3 +30,6 @@
 </body>
 
 </html>
+
+
+

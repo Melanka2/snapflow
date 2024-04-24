@@ -1,12 +1,12 @@
 body {
-    margin: 0;
-    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    background:url("https://cdn0.hitched.co.uk/vendor/1760/3_2/960/jpg/alex-buckland-003_4_301760-164962177046381.webp");
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin: 0;
+    background-position: center;
+
 }
 
 .signup-container {
@@ -14,6 +14,13 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-position: center;
+    margin: 400px; 
+    width: 30%;
+    height: 90%;
+    border-width: 40%;
+    
+    
 }
 
 h2 {
@@ -22,7 +29,7 @@ h2 {
 }
 
 .input-group {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .input-group label {

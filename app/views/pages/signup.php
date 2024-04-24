@@ -7,19 +7,20 @@
 <body>
 
 <div class="signup-container">
-        <form id="signup-form">
+<form id="signup-form" method="post" action="<?php echo URLROOT; ?>/UserController/signUp">
             <h2>Sign Up</h2>
             <div class="input-group">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" name="email" placeholder="email">
             </div>
             
             <div class="input-group">
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" name="password" placeholder="Password">
             </div>
-            <button type="submit">Sign Up</button>
+            <button name="submitSignup" value="submitSignup">Signup</button>
         </form>
+</form>
     </div>
 
     <script src="<?php echo URLROOT ?>/public/js/form.js"></script>
