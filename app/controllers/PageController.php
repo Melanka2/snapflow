@@ -72,6 +72,11 @@ class PageController extends Controller
         $this->view('pages/feedback');
     }
 
+    public function payment1()
+    {
+        $this->view('pages/payment1');
+    }
+
 
 
    
