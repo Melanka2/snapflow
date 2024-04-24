@@ -3,11 +3,12 @@
 class PageController extends Controller
 {
     var $adminModel;
-    var $organizationController;
 
     public function __construct()
     {
-        $this->organizationController = $this->controller('OrganizationController');
+
+
+        $this->adminModel = $this->model('Admin');
     }
 
     public function index()
@@ -30,7 +31,7 @@ class PageController extends Controller
         if (!isset($_SESSION['email'])) {
             header('Location: ' . URLROOT . '/PageController/login');
         }
-        $this->view('pages/admindashboard');
+        $this->view('pages/admindashboard', $data);
     }
     public function payment()
     {
@@ -44,35 +45,10 @@ class PageController extends Controller
         $this->view('pages/adminprofile',$organizations);
     }
 
-    public function organization()
+    public function blog()
     {
         $organizations = $this->organizationController->getOrganizations();
         extract($organizations);
-        $this->view('pages/organization', $organizations);
+        $this->view('pages/blog', $organizations);
     }
-    
-    public function photographerprofile()
-    {
-        $this->view('pages/photographerprofile');
-    }
-
-     
-    public function managerprofile()
-    {
-        $this->view('pages/managerprofile');
-    }
-
-    public function packages()
-    {
-        $this->view('pages/packages');
-    }
-
-    public function feedback()
-    {
-        $this->view('pages/feedback');
-    }
-
-
-
-   
 }
