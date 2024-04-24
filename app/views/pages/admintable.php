@@ -13,7 +13,7 @@
     <div>
       <a class="active" href="#home">Home</a>
       <a href="#Blog">Blog</a>
-      <a href="#About us">About Us</a>
+      <a href="#About">About Us</a>
       <a href="#Packages">Packages</a>
     </div>
 </div>
