@@ -6,6 +6,7 @@
     </head>
 <body>
 
+<script src="editorprofile.js"></script>
 <div class="topnav">
     <div class="test">
       <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
@@ -21,19 +22,19 @@
       <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
     </div>
   </div>
-  
-    <div class="editorprofile-info-img">
-    <p>Editor Profile</p>
 
-    <div class="break"></div>
+    <div class="wrapper">
+        <div class="left">
+    <h3>Editor Profile</h3>
+    <br><br>
     <h3> Editor Info</h3>
     <h3> Edit Profile</h3>
     <h3> Upload Folders</h3>
     <h3>settings</h3>
-</div>
+</div><br><br>
 
 <!--need to add upload folder, name, date-->
-
+<div class="right">
 <h3><b>Client Chosen Photos</b></h3>
 
 <!--need to add choose photo list-->
@@ -49,6 +50,7 @@
 </div>
 <div>
 <p>This is a Feeedback!This is a Feedback!This is a Feedback!This is a Feedback!This is a Feedback!</p>
+</div>
 </div>
 
 </fieldset>

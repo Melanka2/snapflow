@@ -1,14 +1,6 @@
 div.a {
     text-align:center;
-}
-div.b {
-    text-align:left;
-}
-div.c {
-    text-align:justify;
-}
-div.d {
-    text-align:justify;
+    
 }
 
 
@@ -48,5 +40,53 @@ img  {
     border-radius: 20%;
     
   } 
+/*
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
 
+section {
+    padding: 0 100px;
+    background: url(about1.1.jpeg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    text-align: justify;
 
+}
+.box {
+    position: relative;
+    max-width: 600px;
+    padding: 50px;
+    background: rgba(255,255,255,.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+.box h2{
+    margin: 0 0 20px;
+    padding: 0;
+    font-size: 48px;
+    text-transform: uppercase;
+    color: #F9EAF2;
+}
+.box p{
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}*/
+
+/*body{
+    background:url(/public/images/about1.1.jpeg) no-repeat center center fixed ;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.myBackground {
+  background-color: rgba(255,255,255, 0.5);
+  color: inherit;
+}
+*/

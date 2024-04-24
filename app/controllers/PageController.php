@@ -49,6 +49,10 @@ class PageController extends Controller
         $this->view('pages/about');
     }
 
+    public function userprofile()
+    {
+        $this->view('pages/userprofile');
+    }
 
 
 

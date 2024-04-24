@@ -8,10 +8,12 @@ function executeRating(stars, result) {
    const starClassActive = "rating__star fas fa-star";
    const starClassUnactive = "rating__star far fa-star";
    const starsLength = stars.length;
+
    let i;
    stars.map((star) => {
       star.onclick = () => {
          i = stars.indexOf(star);
+         
 
          if (star.className.indexOf(starClassUnactive) !== -1) {
             printRatingResult(result, i + 1);

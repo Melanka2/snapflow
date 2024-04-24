@@ -20,46 +20,43 @@
       <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
     </div>
   </div>
-<section class="profile">
-    <div class="profile-bg">
+<div class="wrapper">
+    <div class="left">
+                <h3>User Profile</h3>
+                <br><br>
+                <div><h4><span class="a"><img src=""></span> User Info</h4></div><br>
+                <div><h4><span class="b"><img src="images/editing.jpg"></span>Editing</h4></div><br>
+                <div><h4><span class="c"><img src="images/settings.jpg"></span>Settings</h4></div><br>
+                <div><h4><span class="d"><img src="images/download_folders.jpg"></span>Download Folders</h4></div><br>
+    </div><br><br>
+    <div class="right">
         <div class="profile-info">
-            <div class="profile-info-img">
-                <p>User Profile</p>
-                <div class="break"></div>
-                <h3> User Info</h3>
-                <h3> Editing</h3>
-                <h3> Settings</h3>
-                <h3> Download Folders</h3>
-            </div>
-        </div>
-    </div>
-    <div class="profile-content">
-        <div class="profile-intro">
-            <h3> Anumi Inupama</h3>
+            <h3>Anumi Inupama</h3>
             <br> <br>
             <form action="">
-                <label for="fname">First Name</label>
+                <label for="fname"><b>First Name:</b></label>
               <br>
-                <input type="text" id="fname" name="fname" value="Anumi" required><br>
-                <label for="lname">Last Name</label>
+                <input type="text" id="fname" name="fname" value="Anumi" required><br><br>
+                <label for="lname"><b>Last Name:</b></label>
              <br>
-                <input type="text" id="lname" name="lname" value="Inupama" required><br>
-                <label for="email">Email Address</label>
+                <input type="text" id="lname" name="lname" value="Inupama" required><br><br>
+                <label for="email"><b>Email Address:</b></label>
             <br>
-                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Please enter valid E-mail" required><br>
-                <label for ="number"> Phone Number</label>
+                <input type="email" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Please enter valid E-mail" required><br><br>
+                <label for ="number"><b>Phone Number:</b></label>
             <br>
-                <input type="tel" id="number" name="number" pattern="[0-9](10)" title="Please enter valid mobile number" required><br>
-                <label for="NIC"> NIC Number</label>
+                <input type="tel" id="number" name="number" pattern="[0-9](10)" title="Please enter valid mobile number" required><br><br>
+                <label for="NIC"><b>NIC Number:</b></label>
             <br>
-                <input type="NIC" id="NIC" name="NIC" required><br>
-                <label for="EmergContact">Emergency Contact</label>
+                <input type="NIC" id="NIC" name="NIC" required><br><br>
+                <label for="EmergContact"><b>Emergency Contact:</b></label>
             <br>
-                <input type="EmergContact" id="EmergContact" name="EmergContact" required><br>
+                <input type="EmergContact" id="EmergContact" name="EmergContact" required><br><br>
 
-            <!--need to change as save changes-->
-                <input type="submit" value="Submit">
-</form>
+                <input type="submit" value="save changes">
+        </form>
+        </div>
+</div>
 
 
 </body>
