@@ -27,7 +27,11 @@ class PageController extends Controller
     }
     public function admindashboard()
     {
-        $this->view('pages/admindashboard');
+        session_start();
+        if (!isset($_SESSION['email'])) {
+            header('Location: ' . URLROOT . '/PageController/login');
+        }
+        $this->view('pages/admindashboard', $data);
     }
     public function payment()
     {
@@ -36,25 +40,15 @@ class PageController extends Controller
 
     public function adminprofile()
     {
-        $this->view('pages/adminprofile');
+        $organizations = $this->organizationController->getNotAcceptedOrganizations();
+        extract($organizations);
+        $this->view('pages/adminprofile',$organizations);
     }
 
-    public function editorprofile()
+    public function blog()
     {
-        $this->view('pages/editorprofile');
+        $organizations = $this->organizationController->getOrganizations();
+        extract($organizations);
+        $this->view('pages/blog', $organizations);
     }
-
-    public function about()
-    {
-        $this->view('pages/about');
-    }
-
-    public function userprofile()
-    {
-        $this->view('pages/userprofile');
-    }
-
-
-
-
 }

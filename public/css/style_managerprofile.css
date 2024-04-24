@@ -1,26 +1,4 @@
-table.center {
-    margin-left: auto;
-    margin-right: auto;
-    border-collapse: collapse;
-    width: 100%;
-    height: 70%;
-    
-  }
-
-  table, th, td {
-    border: 2px solid rgb(70, 51, 67);
-    text-align: left;
-    padding: 8px;
-    color: #5448ad;
-
-  }
-
-  .Accept{
-    background-color: rgb(237, 182, 236);
-    
-  }
-
-  .topnav {
+.topnav {
   
     background-color: #F9EAF2;
     text-align: center;
@@ -39,7 +17,7 @@ table.center {
   }
   
   .topnav a:hover {
-    background-color: #ddd;
+    background-color: #e7b1b1;
     color: rgb(20, 19, 19);
   }
   
@@ -50,6 +28,9 @@ table.center {
     
   } 
 
-  .td{
-    padding-left: 40px;
+  .maindiv{
+
+     width:1503px ;
+     height:700px ;
+     
   }

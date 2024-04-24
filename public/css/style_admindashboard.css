@@ -54,5 +54,91 @@ body {
     
   } 
 
+  .testimonial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-top: 0px;
+  }
+
+  .testimonial-container-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-top: 0px;
+  }
+  
+  /* Styles for individual testimonial */
+  .testimonial {
+    width: 200px;
+    height: 100px;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+    background-color: #ddf1e8;
+  }
+  
+  .testimonial img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .testimonial-text {
+    font-style: italic;
+    color: #3b1515;
+  }
+  
+  .testimonial-company {
+    font-weight: bold;
+  }
+
+
+  .profile-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+/* user profile*/
+.profile-pic {
+    background-color: #f0e2ec;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.username {
+    font-weight: bold;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #e8d6df;
+}
+
+.profile-container:hover .dropdown-content {
+    display: block;
+}
 
   

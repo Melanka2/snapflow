@@ -14,4 +14,13 @@ class OrganizationController extends Controller
     
     return $organizations;
     }
+
+    public function getNotAcceptedOrganizations()
+    {
+        $organizations = $this->organizationModel->getNotAcceptedOrganizations();
+    
+    return $organizations;
+    }
+
+    
 }
