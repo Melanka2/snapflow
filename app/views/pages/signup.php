@@ -5,13 +5,26 @@
       <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_signup.css">
 </head>
 <body>
-    <h1 >Signup</h1>
-    <form method="post" action="<?php echo URLROOT; ?>/UserController/signUp">
-        <input type="text" name="email" placeholder="email">
-        <input type="password" name="password" placeholder="Password">
-        <button name="submitSignup" value="submitSignup">Signup</button>
-    </form>
 
-<script src="<?php echo URLROOT ?>/public/js/form.js"></script>
+<div class="signup-container">
+        <form id="signup-form">
+            <h2>Sign Up</h2>
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+
+    <script src="<?php echo URLROOT ?>/public/js/form.js"></script>
 </body>
 </html>
