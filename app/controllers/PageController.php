@@ -77,6 +77,11 @@ class PageController extends Controller
         $this->view('pages/payment1');
     }
 
+    public function paysuccessful()
+    {
+        $this->view('pages/paysuccessful');
+    }
+
 
 
    
