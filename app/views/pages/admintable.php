@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Admin Profile</title>
-    <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_adminprofile.css">
+    <title>Admin Table</title>
+    <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_admintable.css">
 </head>
 <body>
 

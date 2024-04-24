@@ -39,6 +39,10 @@ CREATE TABLE
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
+INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`)
+VALUES
+    ('manager', 'manager', 1, 0);
+
 CREATE TABLE
     IF NOT EXISTS `editor` (
         `id` int (11) NOT NULL AUTO_INCREMENT,
@@ -49,6 +53,10 @@ CREATE TABLE
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
+
+    INSERT IGNORE INTO `admin` (`first_name`, `last_name`, `user_id`, `reg_date`)
+VALUES
+    ('Admin', 'Admin', 1, 0);
 
 CREATE TABLE
     IF NOT EXISTS `photographer` (
