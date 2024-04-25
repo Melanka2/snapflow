@@ -12,7 +12,7 @@
 
   <div class="topnav">
     <div class="test">
-      <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
+      <img src="<?php echo URLROOT ?>/public/images/logo new 2.png" alt="logo" width="120">
     </div>
     <div>
       <a class="active" href="#home">Home</a>
@@ -31,19 +31,19 @@
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/image1.1.jpg" alt="wedding 1" width="100%" height="700" >
+  <img src="<?php echo URLROOT ?>/public/images/home 1.jpg" alt="wedding 1" width="100%" height="700" >
   
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/image11.jpg" alt="girl" width="100%" height="700">
+  <img src="<?php echo URLROOT ?>/public/images/image 1.jpg" alt="girl" width="100%" height="700">
   
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/image1.jpg"  alt="wedding 3" width="100%" height="700" >
+  <img src="<?php echo URLROOT ?>/public/images/home3.png"  alt="wedding 3" width="100%" height="700" >
   
 </div>
 
@@ -58,9 +58,9 @@
     
     <div class="text-block_1">
       <p1>
-        <h2>Welcome to</h2>
+        <h1>Welcome to</h1>
         <h1>SnapFlow</h1>
-        <h2>Event Photography !</h2>
+        <h1>Event Photography !</h1>
       </p1>
     </div>
     <div class="text-block_2">

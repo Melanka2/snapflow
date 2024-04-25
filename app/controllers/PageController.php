@@ -77,6 +77,11 @@ class PageController extends Controller
         $this->view('pages/blog');
     }
 
+    public function about()
+    {
+        $this->view('pages/about');
+    }
+
 
 
    

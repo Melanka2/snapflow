@@ -20,7 +20,7 @@
     <div>
     <a href="<?php echo URLROOT ?>/PageController/homepage">Home</a>
     <a class="active" href="<?php echo URLROOT ?>/PageController/packages">Blog</a>
-      <a href="<?php echo URLROOT ?>/PageController/about us">About Us</a>
+      <a href="<?php echo URLROOT ?>/PageController/about">About Us</a>
       <a href="<?php echo URLROOT ?>/PageController/packages">Packages</a>
     
       
