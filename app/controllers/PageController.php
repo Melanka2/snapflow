@@ -82,6 +82,11 @@ class PageController extends Controller
         $this->view('pages/paysuccessful');
     }
 
+    public function booking()
+    {
+        $this->view('pages/booking');
+    }
+
 
 
    

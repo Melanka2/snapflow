@@ -6,6 +6,8 @@
 </head>
 <body>
     <img class="img-booking" src="<?php echo URLROOT ?>/public/img/booking.jpg">
+
+    <div class="padding">
 	<form style="background-color:#E6E6FA">
 	<fieldset>
 	<table table-width="100%">
@@ -62,6 +64,7 @@
 		</tr>
 	</table>
 	</fieldset>
-	</form>	
+	</form>
+    </div>
 </body>
 </html>
