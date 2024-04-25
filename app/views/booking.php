@@ -5,10 +5,9 @@
 	<link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_booking.css">
 </head>
 <body>
-	
+    <img class="img-booking" src="<?php echo URLROOT ?>/public/img/booking.jpg">
 	<form style="background-color:#E6E6FA">
 	<fieldset>
-	<div class="padding">
 	<table table-width="100%">
 		<tr>
 			<td>
@@ -57,7 +56,6 @@
 			</td>
 		</tr>
 	</table>
-	</div>
 	</fieldset>
 	</form>	
 </body>
