@@ -11,23 +11,23 @@
 	<table table-width="100%">
 		<tr>
 			<td>
-				<lable>First Name</lable>
+				<label>First Name</label>
 				<input type="text" value="(Amila)">
 				<br><br>
 	
-				<lable>Last Name</lable>
+				<label>Last Name</label>
 				<input type="text" value="(Fernando)">
 				<br><br>
 	
-				<lable>Email</lable>
+				<label>Email</label>
 				<input type="text" value="Email Address">
 				<br><br>
 	
-				<lable>Phone Number</lable>
+				<label>Phone Number</label>
 				<input type="text" value="+94">
 				<br><br>
 				
-				<lable>Package Type</lable>
+				<label>Package Type</label>
 				<select>
 					<option value="pack1">Package 1</option>
 					<option value="pack2">Package 2</option>
@@ -35,7 +35,7 @@
 				</select>
 				<br><br>
 				
-				<lable>Photographer Name</lable>
+				<label>Photographer Name</label>
 				<select>
 					<option value="p1">Lakshan</option>
 					<option value="p2">Kasun</option>
@@ -43,12 +43,17 @@
 				</select>
 				<br><br>
 				
-				<lable>Date</lable>
+				<label>Date</label>
 				<input type="date">
 				<br><br>
 				
-				<lable>Venue</lable>
+				<label>Venue</label>
 				<input type="text" value="Location">
+				<br><br>
+
+                <label>Copy Type</label>
+				<input type="radio" id="softcopy" value="Soft Copy">
+                <input type="radio" id="hardcopy" value="Hard Copy">
 				<br><br>
 				
 				<input type="submit" value="Proceed">
