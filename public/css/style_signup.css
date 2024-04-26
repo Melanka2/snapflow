@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background:url("https://cdn0.hitched.co.uk/vendor/1760/3_2/960/jpg/alex-buckland-003_4_301760-164962177046381.webp");
+    background:url("https://i.pinimg.com/564x/a2/98/8d/a2988d3561fcf4069dec47e3331e2158.jpg");
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,9 +15,10 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-position: center;
-    margin: 400px; 
+    margin-left: 20px; 
+    margin-right: 20px;
     width: 30%;
-    height: 90%;
+    height: 50%;
     border-width: 40%;
     
     

@@ -41,7 +41,17 @@ CREATE TABLE
 
 INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`)
 VALUES
-    ('manager', 'manager', 1, 0);
+    ('manager1', 'manager1', 2, 0);
+
+INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`)
+VALUES
+    ('manager2', 'manager2', 3, 0);
+
+INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`)
+VALUES
+    ('manager3', 'manager3', 4, 0);
+
+
 
 CREATE TABLE
     IF NOT EXISTS `editor` (
@@ -54,9 +64,17 @@ CREATE TABLE
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
-    INSERT IGNORE INTO `admin` (`first_name`, `last_name`, `user_id`, `reg_date`)
-VALUES
-    ('Admin', 'Admin', 1, 0);
+    INSERT IGNORE INTO `editor` (`first_name`, `last_name`, `user_id`, `reg_date`)
+    VALUES
+    ('editor1', 'editor1', 11, 0);
+
+    INSERT IGNORE INTO `editor` (`first_name`, `last_name`, `user_id`, `reg_date`)
+    VALUES
+    ('editor2', 'editor2', 12, 0);
+
+    INSERT IGNORE INTO `editor` (`first_name`, `last_name`, `user_id`, `reg_date`)
+    VALUES
+    ('editor3', 'editor3', 13, 0);
 
 CREATE TABLE
     IF NOT EXISTS `photographer` (
@@ -69,6 +87,19 @@ CREATE TABLE
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
+    INSERT IGNORE INTO `photographer`(`first_name`, `last_name`, `user_id`, `reg_date`)
+    VALUES
+        (`photography1`,`photography1`,5,0);
+
+        INSERT IGNORE INTO `photographer`(`first_name`, `last_name`, `user_id`, `reg_date`)
+    VALUES
+        (`photography2`,`photography2`,6,0);
+
+        INSERT IGNORE INTO `photographer`(`first_name`, `last_name`, `user_id`, `reg_date`)
+    VALUES
+        (`photography3`,`photography3`,7,0);
+    
+
 CREATE TABLE
     IF NOT EXISTS `custormer` (
         `id` int (11) NOT NULL AUTO_INCREMENT,
@@ -80,6 +111,19 @@ CREATE TABLE
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
+
+INSERT IGNORE INTO `custormer`(`first_name`, `last_name`, `user_id`, `reg_date`)
+    VALUES
+        (`custormer1`,`custormer1`,8,0);
+
+        INSERT IGNORE INTO `custormer`(`first_name`, `last_name`, `user_id`, `reg_date`)
+    VALUES
+        (`custormer2`,`custormer2`,9,0);
+
+INSERT IGNORE INTO `custormer`(`first_name`, `last_name`, `user_id`, `reg_date`)
+    VALUES
+        (`custormer3`,`custormer3`,10,0);
+
 CREATE TABLE
     IF NOT EXISTS `payment` (
         `payment_id` int (11) NOT NULL AUTO_INCREMENT,
@@ -90,6 +134,20 @@ CREATE TABLE
         KEY `user_id` (`user_id`),
         KEY `payment_date` (`payment_date`)
     );
+
+INSERT IGNORE INTO `payment`(`user_id`,`amount`,`payment_date`)
+VALUES
+    (14,200,0);
+
+INSERT IGNORE INTO `payment`(`user_id`,`amount`,`payment_date`)
+VALUES
+    (15,300,0);
+
+INSERT IGNORE INTO `payment`(`user_id`,`amount`,`payment_date`)
+VALUES
+    (16,400,0);
+
+
 
 CREATE TABLE
     IF NOT EXISTS `booking` (
@@ -104,6 +162,10 @@ CREATE TABLE
         PRIMARY KEY (`book_id`)
     );
 
+    INSERT IGNORE INTO `booking`(`event_type`,`book_date`,`event_date`,`event_id`,`photo_code`,`payment_id`,`pack_code`)
+    VALUES
+    (`event1`,0,0,);
+
 CREATE TABLE
     IF NOT EXISTS `photo` (
         `photo_code` int (11) NOT NULL AUTO_INCREMENT,
@@ -112,6 +174,10 @@ CREATE TABLE
         `album_code` int (11) NOT NULL DEFAULT '0',
         PRIMARY KEY (`photo_code`)
     );
+
+    INSERT IGNORE INTO `photo` (`photo_code`,`url`,`date`,`album_code`)
+    VALUES
+      (001,`img_url1`,0,0001)
 
 CREATE TABLE
     IF NOT EXISTS `organization` (

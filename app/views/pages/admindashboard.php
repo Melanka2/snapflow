@@ -30,7 +30,8 @@
             <div class="dropdown-content">
                 <a href="#">Edit Profile</a>
                 <a href="#">Settings</a>
-                <a href="#">Logout</a>
+                <?php echo $_SESSION['email']  ?>
+<a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
             </div>
         </div>
     </div>
@@ -71,8 +72,7 @@
       </div>
     
   </div>
-<?php echo $_SESSION['email']  ?>
-<a href="<?php echo URLROOT ?>/PageController/logout">Logout</a>
+
 
 <div class="chart">
 <div style="width: 500px;">
