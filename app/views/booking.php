@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <head>
-	<title>Payment Successful</title>
-	
-	<link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_booking.css">
+    <title>Booking Page</title>
+
+    <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_booking.css">
 </head>
 <body>
-    <img class="img-booking" src="<?php echo URLROOT ?>/public/img/booking.jpg">
 
-    <div class="padding">
+<div class="topnav">
+    <div class="test">
+      <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
+    </div>
+    <div>
+      <a class="active" href="#home">Home</a>
+      <a href="#Blog">Blog</a>
+      <a href="#About us">About Us</a>
+      <a href="#Packages">Packages</a>
+    </div>
+    <div class="log">
+      <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
+      <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
+    </div>
+  </div>
+
+<img class="img-booking" src="<?php echo URLROOT ?>/public/img/booking.jpg">
+
+<div class="padding">
 	<form style="background-color:#E6E6FA">
 	<fieldset>
-	<table table-width="100%">
-		<tr>
-			<td>
+
 				<label>First Name</label>
 				<input type="text" value="(Amila)">
 				<br><br>
@@ -52,19 +67,22 @@
 				<label>Venue</label>
 				<input type="text" value="Location">
 				<br><br>
-
-                <label>Copy Type</label>
-				<input type="radio" id="softcopy" value="Soft Copy">
-                <input type="radio" id="hardcopy" value="Hard Copy">
+				
+				<label>Copy Type</label>
+				<br>
+                <div class="radio-padding">
+				<input type="radio" id="softcopy" value="softcopy" name="copy"> Soft Copy </div>
+				<div class="radio-padding">
+                <input type="radio" id="hardcopy" value="hardcopy" name="copy"> Hard Copy </div>
 				<br><br>
 				
+				<div class="right">
 				<input type="submit" value="Proceed">
 				<br><br>
-			</td>
-		</tr>
-	</table>
+				</div>
+
 	</fieldset>
-	</form>
-    </div>
+	</form>	
+	</div>
 </body>
 </html>
