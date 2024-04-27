@@ -321,7 +321,7 @@ CREATE TABLE
         `name` varchar(100) UNIQUE NOT NULL DEFAULT '',
         `description` varchar(100) NOT NULL DEFAULT '',
         `img_url` varchar(100) NOT NULL DEFAULT '',
-        `manager_id` int (11) NOT NULL DEFAULT '0',
+        `manager_id` int (11) NOT NULL DEFAULT 1,
         `accepted` boolean NOT NULL DEFAULT '0',
         PRIMARY KEY (`organi_id`)
     );
