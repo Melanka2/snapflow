@@ -40,5 +40,16 @@ class Organization {
         }
     }
 
+    public function acceptOrganization ($data)
+    {
+        $this->db->query('UPDATE organization SET accepted = 1 WHERE id = :id');
+        $this->db->bind(':id', $data['id']);
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 
 }

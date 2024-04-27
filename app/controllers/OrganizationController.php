@@ -22,5 +22,10 @@ class OrganizationController extends Controller
     return $organizations;
     }
 
+    public function acceptOrganization ()
+    {
+        
+    }
+
     
 }
