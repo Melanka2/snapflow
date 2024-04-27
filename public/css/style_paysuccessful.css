@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #a7ffe2;
     margin: 0;
     padding: 0;
     display: flex;
@@ -41,6 +41,32 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
+
+.container2 {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 150px;
+    border-radius: 8px;
+}
+
+.next-button {
+  background-color: #fff;
+  color: #000000;
+  border: 1px solid #000;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.next-button:hover {
+  background-color: #a8a6a6; 
+}
+
+.right {
+	text-align: right;
 }
 
 .topnav {

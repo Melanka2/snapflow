@@ -23,13 +23,19 @@
     </div>
 </div>
 
-	<div class="container">
-		<h1>Payment Successful!</h1>
-		<p>Your payment has been completed successfully.</p>
-		<h5>We will provide all photos after you have made the full payment.</h5>
-		<button id="doneButton">Done</button>
+	<div class="container2">
+		<div class="container">
+			<h1>Payment Successful!</h1>
+			<p>Your payment has been completed successfully.</p>
+			
+			<button id="doneButton">Done</button>
+		</div>
+			<h5>We will provide all photos after you have made the full payment.</h5>
+			
+			<div class="right">
+				<button class="next-button">Next</button>
+			</div>
 	</div>
-	<h1>Welcome!</h1>
 
 </body>
 </html>
