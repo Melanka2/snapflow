@@ -1,14 +1,13 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-    <head>
-        <title> maneger profile</title>
-        <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_managerprofile.css">
-    </head>
 
-    <body>
+<head>
+  <title> maneger profile</title>
+  <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_managerprofile.css">
+</head>
 
-      
-<div class="topnav">
+<body>
+  <div class="topnav">
     <div class="test">
       <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
     </div>
@@ -93,8 +92,26 @@
     <center>
     
 
-</div">
+            <tr>
+              <td><img src="<?php echo URLROOT ?>/public/images/settings.png" alt="logo" width="50"></td>
+              <td><a style=" color: #151515;text-decoration: none;font-size: 17px;" href="#setting"> setting</a></td>
+            <tr>
 
-</div>
-    </body>
+          </table><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+          <table>
+            <tr>
+              <td width="60px"><img src="<?php echo URLROOT ?>/public/images/signout.png" alt="logo" width="50"></td>
+              <td><a style=" color: #151515;text-decoration: none;font-size: 17px;" href="<?php echo URLROOT ?>/PageController/logout">Logout</a></td>
+            </tr>
+          </table>
+        </center>
+    </div>
+    <div style="background-color:  aliceblue; width: 1000px;height: 780px; float:right; ">
+
+
+      </div">
+
+    </div>
+</body>
+
 </html>
