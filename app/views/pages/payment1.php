@@ -2,10 +2,10 @@
 <head>
 	<title>Payment 1</title>
 	
-	<link rel="stylesheet" href="testpay.css">
+	<link rel="stylesheet" href="payment1.css">
 </head>
 <body>
-	    
+
 <div class="topnav">
     <div class="test">
       <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
