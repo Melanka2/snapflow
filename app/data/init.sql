@@ -322,7 +322,7 @@ CREATE TABLE
         `description` varchar(100) NOT NULL DEFAULT '',
         `img_url` varchar(100) NOT NULL DEFAULT '',
         `manager_id` int (11) NOT NULL DEFAULT 1,
-        `accpeted` boolean NOT NULL DEFAULT '0',
+        `accepted` boolean NOT NULL DEFAULT '0',
         PRIMARY KEY (`organi_id`)
     );
 
