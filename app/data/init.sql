@@ -19,8 +19,7 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` int (11) NOT NULL DEFAULT '0',
-        PRIMARY KEY (`id`),
-        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+        PRIMARY KEY (`id`)
     );
 
 INSERT IGNORE INTO `admin` (`first_name`, `last_name`, `user_id`, `reg_date`)
@@ -35,21 +34,20 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` int (11) NOT NULL DEFAULT '0',
-        PRIMARY KEY (`id`),
-        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+        PRIMARY KEY (`id`)
     );
 
 INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`)
 VALUES
-    ('manager1', 'manager1', 2, 0);
+    ('manager1', 'manager1', 1, 0);
 
 INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`)
 VALUES
-    ('manager2', 'manager2', 3, 0);
+    ('manager2', 'manager2', 2, 0);
 
 INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`)
 VALUES
-    ('manager3', 'manager3', 4, 0);
+    ('manager3', 'manager3', 3, 0);
 
 
 
@@ -60,21 +58,20 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` int (11) NOT NULL DEFAULT '0',
-        PRIMARY KEY (`id`),
-        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+        PRIMARY KEY (`id`)
     );
 
     INSERT IGNORE INTO `editor` (`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-    ('editor1', 'editor1', 11, 0);
+    ('editor1', 'editor1', 1, 0);
 
     INSERT IGNORE INTO `editor` (`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-    ('editor2', 'editor2', 12, 0);
+    ('editor2', 'editor2', 2, 0);
 
     INSERT IGNORE INTO `editor` (`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-    ('editor3', 'editor3', 13, 0);
+    ('editor3', 'editor3', 3, 0);
 
 CREATE TABLE
     IF NOT EXISTS `photographer` (
@@ -83,21 +80,20 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` int (11) NOT NULL DEFAULT '0',
-        PRIMARY KEY (`id`),
-        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+        PRIMARY KEY (`id`)
     );
 
     INSERT IGNORE INTO `photographer`(`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-        (`photography1`,`photography1`,5,0);
+        ('photography1','photography1',1,0);
 
         INSERT IGNORE INTO `photographer`(`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-        (`photography2`,`photography2`,6,0);
+        ('photography2','photography2',2,0);
 
         INSERT IGNORE INTO `photographer`(`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-        (`photography3`,`photography3`,7,0);
+        ('photography3','photography3',3,0);
     
 
 CREATE TABLE
@@ -107,22 +103,20 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` int (11) NOT NULL DEFAULT '0',
-        PRIMARY KEY (`id`),
-        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+        PRIMARY KEY (`id`)
     );
 
-
 INSERT IGNORE INTO `custormer`(`first_name`, `last_name`, `user_id`, `reg_date`)
-    VALUES
-        (`custormer1`,`custormer1`,8,0);
+      VALUES
+        ('custormer1','custormer1',1,0);
 
         INSERT IGNORE INTO `custormer`(`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-        (`custormer2`,`custormer2`,9,0);
+        ('custormer2','custormer2',2,0);
 
 INSERT IGNORE INTO `custormer`(`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-        (`custormer3`,`custormer3`,10,0);
+        ('custormer3','custormer3',3,0);
 
 CREATE TABLE
     IF NOT EXISTS `payment` (
@@ -137,15 +131,15 @@ CREATE TABLE
 
 INSERT IGNORE INTO `payment`(`user_id`,`amount`,`payment_date`)
 VALUES
-    (14,200,0);
+    (1,200,0);
 
 INSERT IGNORE INTO `payment`(`user_id`,`amount`,`payment_date`)
 VALUES
-    (15,300,0);
+    (2,300,0);
 
 INSERT IGNORE INTO `payment`(`user_id`,`amount`,`payment_date`)
 VALUES
-    (16,400,0);
+    (3,400,0);
 
 
 
@@ -164,7 +158,15 @@ CREATE TABLE
 
     INSERT IGNORE INTO `booking`(`event_type`,`book_date`,`event_date`,`event_id`,`photo_code`,`payment_id`,`pack_code`)
     VALUES
-    (`event1`,0,0,);
+    ('event1',0,0,001,01,100);
+
+    INSERT IGNORE INTO `booking`(`event_type`,`book_date`,`event_date`,`event_id`,`photo_code`,`payment_id`,`pack_code`)
+    VALUES
+    ('event2',0,0,002,02,101);
+
+    INSERT IGNORE INTO `booking`(`event_type`,`book_date`,`event_date`,`event_id`,`photo_code`,`payment_id`,`pack_code`)
+    VALUES
+    ('event3',0,0,003,03,102);
 
 CREATE TABLE
     IF NOT EXISTS `photo` (
@@ -177,14 +179,23 @@ CREATE TABLE
 
     INSERT IGNORE INTO `photo` (`photo_code`,`url`,`date`,`album_code`)
     VALUES
-      (001,`img_url1`,0,0001)
+      (001,`img_url1`,0,0001);
+
+    INSERT IGNORE INTO `photo` (`photo_code`,`url`,`date`,`album_code`)
+    VALUES
+      (002,`img_url2`,0,0002);
+
+    INSERT IGNORE INTO `photo` (`photo_code`,`url`,`date`,`album_code`)
+    VALUES
+      (003,`img_url3`,0,0031);
+
 
 CREATE TABLE
     IF NOT EXISTS `organization` (
         `organi_id` int (11) NOT NULL AUTO_INCREMENT,
         `name` varchar(100) NOT NULL DEFAULT '',
         `description` varchar(100) NOT NULL DEFAULT '',
-        `img_url` varchar(100) NOT NULL DEFAULT '',
+        `oimg_url` varchar(100) NOT NULL DEFAULT '',
         `feedback_code` int(11) NOT NULL  UNIQUE,
         `manager_id` int(11) NOT NULL UNIQUE,
         `accpeted` boolean NOT NULL DEFAULT '0',
@@ -211,18 +222,40 @@ CREATE TABLE
         `organi_id` int (11) NOT NULL DEFAULT '0',
         `photographer_id` int (11) NOT NULL DEFAULT '0',
         PRIMARY KEY (`organi_id`, `photographer_id`),
-        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`),
-        FOREIGN KEY (`photographer_id`) REFERENCES `photographer` (`id`)
+      
     );
+
+    INSERT IGNORE INTO `organization_photographer`(`organi_id`,`photographer_id`)
+    VALUES 
+    (1,1);
+
+    INSERT IGNORE INTO `organization_photographer`(`organi_id`,`photographer_id`)
+    VALUES 
+    (2,2);
+
+     INSERT IGNORE INTO `organization_photographer`(`organi_id`,`photographer_id`)
+    VALUES 
+    (3,3);
 
     CREATE TABLE
    IF NOT EXISTS `organization_editor` (
         `organi_id` int (11) NOT NULL DEFAULT '0',
         `editor_id` int (11) NOT NULL DEFAULT '0',
         PRIMARY KEY (`organi_id`, `editor_id`),
-        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`),
-        FOREIGN KEY (`editor_id`) REFERENCES `editor` (`id`)
+      
     );
+
+    INSERT IGNORE INTO `organization_editor`(`organi_id`,`editor_id`)
+    VALUES 
+    (1,1);
+
+    INSERT IGNORE INTO `organization_editor`(`organi_id`,`editor_id`)
+    VALUES 
+    (2,2);
+
+    INSERT IGNORE INTO `organization_editor`(`organi_id`,`editor_id`)
+    VALUES 
+    (3,3);
 
 
 CREATE TABLE
@@ -231,9 +264,22 @@ CREATE TABLE
         `pack_name` varchar(100) NOT NULL DEFAULT '',
         `soft_copy_price` int (11) NOT NULL DEFAULT '0',
         `hard_copy_price` int (11) NOT NULL DEFAULT '0',
-        `packa_code` int(11) NOT NULL UNIQUE,
         PRIMARY KEY (`pack_code`)
     );
+
+    INSERT IGNORE INTO `package`(`pack_code`,`pack_name`,`soft_copy_price`,`hard_copy_price`)
+    VALUES
+    (100,'wedding',200000,600000);
+
+     INSERT IGNORE INTO `package`(`pack_code`,`pack_name`,`soft_copy_price`,`hard_copy_price`)
+    VALUES
+    (101,'birthday',50000,200000);
+
+     INSERT IGNORE INTO `package`(`pack_code`,`pack_name`,`soft_copy_price`,`hard_copy_price`)
+    VALUES
+    (100,'shoot',40000,100000);
+
+
 
 CREATE TABLE
     IF NOT EXISTS `feedback` (
@@ -242,10 +288,20 @@ CREATE TABLE
         `organi_id` int (11) NOT NULL DEFAULT '0',
         `user_id` int (11) NOT NULL DEFAULT '0',
         PRIMARY KEY (`organi_id`, `user_id`),
-        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`),
-        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+       
     );
 
+    INSERT IGNORE INTO `feedback`(`comment`,`rate`,`organi_id`,`user_id`)
+    VALUES
+     ('good',0,1,1);
+
+     INSERT IGNORE INTO `feedback`(`comment`,`rate`,`organi_id`,`user_id`)
+    VALUES
+     ('very good',0,2,2);
+
+     INSERT IGNORE INTO `feedback`(`comment`,`rate`,`organi_id`,`user_id`)
+    VALUES
+     ('good',0,3,3);
 
 
     
