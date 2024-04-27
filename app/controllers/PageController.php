@@ -62,6 +62,7 @@ class PageController extends Controller
         $this->view('pages/managerprofile');
     }
 
+    
     public function packages()
     {
         $this->view('pages/packages');

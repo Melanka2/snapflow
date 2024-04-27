@@ -34,3 +34,16 @@
      height:700px ;
      
   }
+  input[type="text"]{
+
+    width: 50%;
+    padding: 12px 20px;
+    display: inline-block; 
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin: 8px 0;
+    display: inline-block;
+    
+    
+  }
