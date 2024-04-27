@@ -50,6 +50,18 @@ class Organization {
         } else {
             return false;
         }
+    }  
+
+
+    public function deleteOrganization($data)
+    {
+        $this->db->query('DELETE FROM organization WHERE organi_id = :id');
+        $this->db->bind(':id', $data['id']);
+        if ($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
 
