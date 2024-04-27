@@ -69,10 +69,34 @@ class User
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':password', $data['password']);
 
-        $row = $this->db->single();
+        $userData = $this->db->single();
+
+        if ($userData->role == 'ADMIN') {
+            $this->db->query('SELECT * FROM admin WHERE user_id = :id');
+            $this->db->bind(':id', $userData->id);
+            $row = $this->db->single();
+        } elseif ($userData->role == 'MANAGER') {
+            $this->db->query('SELECT * FROM manager WHERE user_id = :id');
+            $this->db->bind(':id',  $userData->id);
+            $row = $this->db->single();
+        } elseif ($userData->role == 'EDITOR') {
+            $this->db->query('SELECT * FROM editor WHERE user_id = :id');
+            $this->db->bind(':id',  $userData->id);
+            $row = $this->db->single();
+        } elseif ($userData->role == 'PHOTOGRAPHER') {
+            $this->db->query('SELECT * FROM photographer WHERE user_id = :id');
+            $this->db->bind(':id',  $userData->id);
+            $row = $this->db->single();
+        } elseif ($userData->role == 'CUSTOMER') {
+            $this->db->query('SELECT * FROM customer WHERE user_id = :id');
+            $this->db->bind(':id', $userData->id);
+            $row = $this->db->single();
+        }
+
+        $userData->roleData = $row;
 
         if ($this->db->rowCount() > 0) {
-            return $row;
+            return $userData;
         } else {
             return false;
         }

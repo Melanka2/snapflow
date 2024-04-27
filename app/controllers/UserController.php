@@ -3,12 +3,12 @@
 class UserController extends Controller
 {
 
-    var $adminModel;
+    
     var $userModel;
 
     public function __construct()
     {
-        $this->adminModel = $this->model('Admin');
+      
         $this->userModel = $this->model('User');
     }
 
@@ -53,10 +53,11 @@ class UserController extends Controller
                 'password' => $password,
                 
             ];
-
-            if ($this->userModel->signIn($data)) {
+            $userData=$this->userModel->signIn($data);
+            if ($userData) {
                 session_start();
                 $_SESSION['email'] = $data['email'];
+                $_SESSION['userData'] = $userData;
                 header('location:' . URLROOT . '/PageController/admindashboard/' . $data['email']);
           
             };
