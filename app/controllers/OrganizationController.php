@@ -38,4 +38,21 @@ class OrganizationController extends Controller
             }
         }
     }
+
+    public function deleteOrganization()
+    {
+
+        if (isset($_POST['submitDelete'])) {
+            $data = [
+                'id' => $_POST['id'],
+            ];
+        
+            if ($this->organizationModel->deleteOrganization($data)) {
+                header('location:' . URLROOT . '/PageController/admintable');
+            }
+            else{
+                die('Something went wrong');
+            }
+        }
+    }
 }
