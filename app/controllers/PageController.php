@@ -37,16 +37,18 @@ class PageController extends Controller
         $this->view('pages/payment');
     }
 
-    public function adminprofile()
+    public function admintable()
     {
-        $this->view('pages/adminprofile');
+        $organizations = $this->organizationController->getNotAcceptedOrganizations();
+        extract($organizations);
+        $this->view('pages/admintable',$organizations);
     }
 
-    public function blog()
+    public function organization()
     {
         $organizations = $this->organizationController->getOrganizations();
         extract($organizations);
-        $this->view('pages/blog', $organizations);
+        $this->view('pages/organization', $organizations);
     }
     
     public function photographerprofile()
@@ -63,11 +65,25 @@ class PageController extends Controller
     
     public function packages()
     {
-        $this->view('pages/pkg');
+        $this->view('pages/packages');
     }
 
     public function feedback()
     {
         $this->view('pages/feedback');
     }
+
+    public function blog()
+    {
+        $this->view('pages/blog');
+    }
+
+    public function about()
+    {
+        $this->view('pages/about');
+    }
+
+
+
+   
 }

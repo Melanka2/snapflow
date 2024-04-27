@@ -7,15 +7,29 @@
 </head>
 
 <body>
-    <h1 class="">Login</h1>
+    
     <form method="post" action="<?php echo URLROOT; ?>/UserController/signIn">
-        <input type="text" name="email" placeholder="Email" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <button type="submit" name="submitSignin">Login</button>
-    </form>
-    <div class='img-cls'>
-        <img class="img-login" src="<?php echo URLROOT ?>/public/img/website.jpg" alt="login">
+  
+ 
+<div class="login-container">
+    
+           
+            <div class="input-group">
+                <label for="username">Username:</label>
+                <input type="text" name="email" placeholder="Email">
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" name="password" placeholder="Password">
+            </div>
+            <button type="submit" name="submitSignin">Login</button>
+        </form>
     </div>
+    
+    <script src="<?php echo URLROOT ?>/public/js/login.js"></script>
 </body>
 
 </html>
+
+
+

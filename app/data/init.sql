@@ -7,6 +7,11 @@ CREATE TABLE
         PRIMARY KEY (`id`)
     );
 
+    /*mayashi*/
+INSERT IGNORE INTO `user` (`password`, `email`)
+VALUES
+    ('password', 'admin@localhost');
+
 CREATE TABLE
     IF NOT EXISTS `admin` (
         `id` int (11) NOT NULL AUTO_INCREMENT,
@@ -17,6 +22,11 @@ CREATE TABLE
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
+
+INSERT IGNORE INTO `admin` (`first_name`, `last_name`, `user_id`, `reg_date`)
+VALUES
+    ('Admin', 'Admin', 1, 0);
+
 
 CREATE TABLE
     IF NOT EXISTS `manager` (
@@ -29,6 +39,10 @@ CREATE TABLE
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
+INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`)
+VALUES
+    ('manager', 'manager', 1, 0);
+
 CREATE TABLE
     IF NOT EXISTS `editor` (
         `id` int (11) NOT NULL AUTO_INCREMENT,
@@ -39,6 +53,10 @@ CREATE TABLE
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
+
+    INSERT IGNORE INTO `admin` (`first_name`, `last_name`, `user_id`, `reg_date`)
+VALUES
+    ('Admin', 'Admin', 1, 0);
 
 CREATE TABLE
     IF NOT EXISTS `photographer` (
@@ -61,15 +79,6 @@ CREATE TABLE
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
-
-/*mayashi*/
-INSERT IGNORE INTO `user` (`password`, `email`)
-VALUES
-    ('password', 'admin@localhost');
-
-INSERT IGNORE INTO `admin` (`first_name`, `last_name`, `user_id`, `reg_date`)
-VALUES
-    ('Admin', 'Admin', 1, 0);
 
 CREATE TABLE
     IF NOT EXISTS `payment` (
@@ -111,11 +120,44 @@ CREATE TABLE
         `description` varchar(100) NOT NULL DEFAULT '',
         `img_url` varchar(100) NOT NULL DEFAULT '',
         `feedback_code` int(11) NOT NULL  UNIQUE,
-        `editor_id` int(11) NOT NULL UNIQUE,
-        `photographer_id` int(11) NOT NULL UNIQUE,
         `manager_id` int(11) NOT NULL UNIQUE,
+        `accpeted` boolean NOT NULL DEFAULT '0',
          PRIMARY KEY (`organi_id`)
     );
+
+INSERT IGNORE INTO `organization` (`name`, `description`, `img_url`)
+VALUES
+    ('Organization1', 'Organization1', 'Organization1');
+
+INSERT IGNORE INTO `organization` (`name`, `description`, `img_url`)
+VALUES
+    ('Organization2', 'Organization2', 'Organization2');
+    
+INSERT IGNORE INTO `organization` (`name`, `description`, `img_url`)
+VALUES
+    ('Organization3', 'Organization3', 'Organization3');
+INSERT IGNORE INTO `organization` (`name`, `description`, `img_url`)
+VALUES
+    ('Organization4', 'Organization4', 'Organizatio4');
+
+CREATE TABLE
+   IF NOT EXISTS `organization_photographer` (
+        `organi_id` int (11) NOT NULL DEFAULT '0',
+        `photographer_id` int (11) NOT NULL DEFAULT '0',
+        PRIMARY KEY (`organi_id`, `photographer_id`),
+        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`),
+        FOREIGN KEY (`photographer_id`) REFERENCES `photographer` (`id`)
+    );
+
+    CREATE TABLE
+   IF NOT EXISTS `organization_editor` (
+        `organi_id` int (11) NOT NULL DEFAULT '0',
+        `editor_id` int (11) NOT NULL DEFAULT '0',
+        PRIMARY KEY (`organi_id`, `editor_id`),
+        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`),
+        FOREIGN KEY (`editor_id`) REFERENCES `editor` (`id`)
+    );
+
 
 CREATE TABLE
     IF NOT EXISTS `package` (
@@ -137,3 +179,8 @@ CREATE TABLE
         FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
+
+
+
+    
+    

@@ -29,4 +29,16 @@ class Organization {
         }
     }
 
+    public  function getNotAcceptedOrganizations()
+    {
+        $this->db->query('SELECT * FROM organization');
+        $rows = $this->db->resultSet();
+        if ($this->db->rowCount() > 0) {
+            return $rows;
+        } else {
+            return false;
+        }
+    }
+
+
 }
