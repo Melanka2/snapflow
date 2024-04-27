@@ -1,8 +1,8 @@
 CREATE TABLE
     IF NOT EXISTS `user` (
         `id` int (11) NOT NULL AUTO_INCREMENT,
-        `password` varchar(100) NOT NULL DEFAULT '',
         `email` varchar(100) NOT NULL UNIQUE,
+        `password` varchar(100) NOT NULL DEFAULT '',
         `role` enum (
             'ADMIN',
             'MANAGER',
@@ -16,54 +16,134 @@ CREATE TABLE
 /*mayashi*/
 INSERT IGNORE INTO `user` (`email`, `password`, `role`)
 VALUES
-    ('admin@localhost', 'admin', 'ADMIN'),
-    ('manager1@localhost', 'manager1', 'MANAGER'),
-    ('manager2@localhost', 'manager2', 'MANAGER'),
-    ('manager3@localhost', 'manager3', 'MANAGER'),
-    ('manager4@localhost', 'manager4', 'MANAGER'),
-    ('manager5@gmail.com', 'manager5', 'MANAGER'),
-    ('editor1@localhost', 'editor1', 'EDITOR'),
-    ('editor2@localhost', 'editor2', 'EDITOR'),
-    ('editor3@localhost', 'editor3', 'EDITOR'),
-    ('editor4@localhost', 'editor4', 'EDITOR'),
-    ('editor5@localhost', 'editor5', 'EDITOR'),
+    (
+        'admin@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'ADMIN'
+    ),
+    (
+        'manager1@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'MANAGER'
+    ),
+    (
+        'manager2@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'MANAGER'
+    ),
+    (
+        'manager3@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'MANAGER'
+    ),
+    (
+        'manager4@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'MANAGER'
+    ),
+    (
+        'manager5@gmail.com',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'MANAGER'
+    ),
+    (
+        'editor1@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'EDITOR'
+    ),
+    (
+        'editor2@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'EDITOR'
+    ),
+    (
+        'editor3@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'EDITOR'
+    ),
+    (
+        'editor4@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'EDITOR'
+    ),
+    (
+        'editor5@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'EDITOR'
+    ),
     (
         'photography1@localhost',
-        'photography1',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
         'PHOTOGRAPHER'
     ),
     (
         'photography2@localhost',
-        'photography2',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
         'PHOTOGRAPHER'
     ),
     (
         'photography3@localhost',
-        'photography3',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
         'PHOTOGRAPHER'
     ),
     (
         'photography4@localhost',
-        'photography4',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
         'PHOTOGRAPHER'
     ),
     (
         'photography5@localhost',
-        'photography5',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
         'PHOTOGRAPHER'
     ),
-    ('custormer1@localhost', 'custormer1', 'CUSTOMER'),
-    ('custormer2@localhost', 'custormer2', 'CUSTOMER'),
-    ('custormer3@localhost', 'custormer3', 'CUSTOMER'),
-    ('custormer4@localhost', 'custormer4', 'CUSTOMER'),
-    ('custormer5@localhost', 'custormer5', 'CUSTOMER'),
-    ('custormer6@localhost', 'custormer6', 'CUSTOMER'),
-    ('custormer7@localhost', 'custormer7', 'CUSTOMER'),
-    ('custormer8@localhost', 'custormer8', 'CUSTOMER'),
-    ('custormer9@localhost', 'custormer9', 'CUSTOMER'),
+    (
+        'custormer1@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'CUSTOMER'
+    ),
+    (
+        'custormer2@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'CUSTOMER'
+    ),
+    (
+        'custormer3@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'CUSTOMER'
+    ),
+    (
+        'custormer4@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'CUSTOMER'
+    ),
+    (
+        'custormer5@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'CUSTOMER'
+    ),
+    (
+        'custormer6@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'CUSTOMER'
+    ),
+    (
+        'custormer7@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'CUSTOMER'
+    ),
+    (
+        'custormer8@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'CUSTOMER'
+    ),
+    (
+        'custormer9@localhost',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
+        'CUSTOMER'
+    ),
     (
         'custormer10@localhost',
-        'custormer10',
+        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
         'CUSTOMER'
     );
 
