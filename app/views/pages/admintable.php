@@ -37,7 +37,11 @@
         <td><?php echo $row->description; ?></td>
         <td></td>
         <td></td>
-        <td><button class="btn Accept">Accept</button>
+        <td>
+        <form method="post" action="<?php echo URLROOT; ?>/OrganizationController/acceptOrganization">
+          <input type="hidden" name="id" value="<?php echo $row->organi_id; ?>">
+          <button class="btn Accept" name="submitAccept" value="submitAccept" type="submit">Accept</button>
+        </form>
           <button class="btn Decline">Decline</button>
           <button class="btn Delete">Delete</button>
         </td>
