@@ -120,31 +120,6 @@ VALUES
         'custormer5@localhost',
         '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
         'CUSTOMER'
-    ),
-    (
-        'custormer6@localhost',
-        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
-        'CUSTOMER'
-    ),
-    (
-        'custormer7@localhost',
-        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
-        'CUSTOMER'
-    ),
-    (
-        'custormer8@localhost',
-        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
-        'CUSTOMER'
-    ),
-    (
-        'custormer9@localhost',
-        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
-        'CUSTOMER'
-    ),
-    (
-        'custormer10@localhost',
-        '5994471abb01112afcc18159f6cc74b4f511b99806da59b3caf5a9c173cacfc5',
-        'CUSTOMER'
     );
 
 CREATE TABLE
@@ -154,7 +129,8 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` date,
-        PRIMARY KEY (`id`)
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
 INSERT IGNORE INTO `admin` (`first_name`, `last_name`, `user_id`, `reg_date`)
@@ -168,7 +144,8 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` date,
-        PRIMARY KEY (`id`)
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
 INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`)
@@ -186,16 +163,18 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` date,
-        PRIMARY KEY (`id`)
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
 INSERT IGNORE INTO `editor` (`first_name`, `last_name`, `user_id`, `reg_date`)
 VALUES
-    ('editor1', 'editor1', 1, '2024-01-01'),
-    ('editor2', 'editor2', 2, '2024-01-02'),
-    ('editor3', 'editor3', 3, '2024-01-03'),
-    ('editor4', 'editor4', 4, '2024-01-04'),
-    ('editor5', 'editor5', 5, '2024-01-05');
+    ('editor1', 'editor1', 7, '2024-01-01'),
+    ('editor2', 'editor2', 8, '2024-01-02'),
+    ('editor3', 'editor3', 9, '2024-01-03'),
+    ('editor4', 'editor4', 10, '2024-01-04'),
+    ('editor5', 'editor5', 11, '2024-01-05');
+ 
 
 CREATE TABLE
     IF NOT EXISTS `photographer` (
@@ -204,39 +183,37 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` date,
-        PRIMARY KEY (`id`)
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
 INSERT IGNORE INTO `photographer` (`first_name`, `last_name`, `user_id`, `reg_date`)
 VALUES
-    ('photography1', 'photography1', 1, '2024-01-01'),
-    ('photography2', 'photography2', 2, '2024-01-02'),
-    ('photography3', 'photography3', 3, '2024-01-03'),
-    ('photography4', 'photography4', 4, '2024-01-04'),
-    ('photography5', 'photography5', 5, '2024-01-05');
+    ('photography1', 'photography1', 12, '2024-01-01'),
+    ('photography2', 'photography2', 13, '2024-01-02'),
+    ('photography3', 'photography3', 14, '2024-01-03'),
+    ('photography4', 'photography4', 15, '2024-01-04'),
+    ('photography5', 'photography5', 16, '2024-01-05');
 
 CREATE TABLE
-    IF NOT EXISTS `custormer` (
+    IF NOT EXISTS `customer` (
         `id` int (11) NOT NULL AUTO_INCREMENT,
         `first_name` varchar(100) NOT NULL DEFAULT '',
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
-        `reg_date` date,
-        PRIMARY KEY (`id`)
+        `reg_date` date DEFAULT CURRENT_DATE,
+        PRIMARY KEY (`id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
-INSERT IGNORE INTO `custormer` (`first_name`, `last_name`, `user_id`, `reg_date`)
+INSERT IGNORE INTO `customer` (`first_name`, `last_name`, `user_id`)
 VALUES
-    ('custormer1', 'custormer1', 1, '2024-01-01'),
-    ('custormer2', 'custormer2', 2, '2024-01-02'),
-    ('custormer3', 'custormer3', 3, '2024-01-03'),
-    ('custormer4', 'custormer4', 4, '2024-01-04'),
-    ('custormer5', 'custormer5', 5, '2024-01-05'),
-    ('custormer6', 'custormer6', 6, '2024-01-06'),
-    ('custormer7', 'custormer7', 7, '2024-01-07'),
-    ('custormer8', 'custormer8', 8, '2024-01-08'),
-    ('custormer9', 'custormer9', 9, '2024-01-09'),
-    ('custormer10', 'custormer10', 10, '2024-01-10');
+    ('custormer1', 'custormer1', 17),
+    ('custormer2', 'custormer2', 18),
+    ('custormer3', 'custormer3', 19),
+    ('custormer4', 'custormer4', 20),
+    ('custormer5', 'custormer5', 21);
+
 
 CREATE TABLE
     IF NOT EXISTS `payment` (
