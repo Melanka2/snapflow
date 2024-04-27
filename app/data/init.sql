@@ -3,14 +3,14 @@ CREATE TABLE
         `id` int (11) NOT NULL AUTO_INCREMENT,
         `password` varchar(100) NOT NULL DEFAULT '',
         `email` varchar(100) NOT NULL UNIQUE,
-        `rols` varchar(100) NOT NULL DEFAULT '',
+        `role` varchar(100) NOT NULL DEFAULT '',
         PRIMARY KEY (`id`)
     );
 
     /*mayashi*/
-INSERT IGNORE INTO `user` (`password`, `email`)
+INSERT IGNORE INTO `user` (`password`, `email`,`role`)
 VALUES
-    ('password', 'admin@localhost');
+    ('password', 'admin@localhost','admin');
 
 CREATE TABLE
     IF NOT EXISTS `admin` (
@@ -79,21 +79,21 @@ CREATE TABLE
         `first_name` varchar(100) NOT NULL DEFAULT '',
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
-        `reg_date` int (11) NOT NULL DEFAULT '0',
+        `reg_date` date,
         PRIMARY KEY (`id`)
     );
 
     INSERT IGNORE INTO `photographer`(`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-        ('photography1','photography1',1,0);
+        ('photography1','photography1',1,'2024-01-01');
 
         INSERT IGNORE INTO `photographer`(`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-        ('photography2','photography2',2,0);
+        ('photography2','photography2',2,'2024-01-02');
 
         INSERT IGNORE INTO `photographer`(`first_name`, `last_name`, `user_id`, `reg_date`)
     VALUES
-        ('photography3','photography3',3,0);
+        ('photography3','photography3',3,'2024-01-03');
     
 
 CREATE TABLE
@@ -147,8 +147,8 @@ CREATE TABLE
     IF NOT EXISTS `booking` (
         `book_id` int (11) NOT NULL AUTO_INCREMENT,
         `event_type` varchar(100) NOT NULL DEFAULT '',
-        `book_date` int (11) NOT NULL DEFAULT '0',
-        `event_date` int (11) NOT NULL DEFAULT '0',
+        `book_date` date ,
+        `event_date` date,
         `event_id` int (11) NOT NULL DEFAULT '0',
         `photo_code` int(11) NOT NULL UNIQUE ,
         `payment_id` int(11) NOT NULL UNIQUE ,
@@ -158,15 +158,15 @@ CREATE TABLE
 
     INSERT IGNORE INTO `booking`(`event_type`,`book_date`,`event_date`,`event_id`,`photo_code`,`payment_id`,`pack_code`)
     VALUES
-    ('event1',0,0,001,01,100);
+    ('event1','2024-01-12','2024-01-13',1,01,1,100);
 
     INSERT IGNORE INTO `booking`(`event_type`,`book_date`,`event_date`,`event_id`,`photo_code`,`payment_id`,`pack_code`)
     VALUES
-    ('event2',0,0,002,02,101);
+    ('event2','2024-01-13','2024-01-14',2,02,1,101);
 
     INSERT IGNORE INTO `booking`(`event_type`,`book_date`,`event_date`,`event_id`,`photo_code`,`payment_id`,`pack_code`)
     VALUES
-    ('event3',0,0,003,03,102);
+    ('event3','2024-01-15','2024-01-16',3,03,1,102);
 
 CREATE TABLE
     IF NOT EXISTS `photo` (
@@ -179,15 +179,15 @@ CREATE TABLE
 
     INSERT IGNORE INTO `photo` (`photo_code`,`url`,`date`,`album_code`)
     VALUES
-      (001,`img_url1`,0,0001);
+      (1,'img_url1',0,1);
 
     INSERT IGNORE INTO `photo` (`photo_code`,`url`,`date`,`album_code`)
     VALUES
-      (002,`img_url2`,0,0002);
+      (2,'img_url2',0,2);
 
     INSERT IGNORE INTO `photo` (`photo_code`,`url`,`date`,`album_code`)
     VALUES
-      (003,`img_url3`,0,0031);
+      (3,'img_url3',0,3);
 
 
 CREATE TABLE
@@ -195,7 +195,7 @@ CREATE TABLE
         `organi_id` int (11) NOT NULL AUTO_INCREMENT,
         `name` varchar(100) NOT NULL DEFAULT '',
         `description` varchar(100) NOT NULL DEFAULT '',
-        `oimg_url` varchar(100) NOT NULL DEFAULT '',
+        `img_url` varchar(100) NOT NULL DEFAULT '',
         `feedback_code` int(11) NOT NULL  UNIQUE,
         `manager_id` int(11) NOT NULL UNIQUE,
         `accpeted` boolean NOT NULL DEFAULT '0',
@@ -224,20 +224,18 @@ CREATE TABLE
         PRIMARY KEY (`organi_id`, `photographer_id`),
       
     );
-
-    INSERT IGNORE INTO `organization_photographer`(`organi_id`,`photographer_id`)
-    VALUES 
+INSERT IGNORE INTO `organization_photographer`(`organi_id`,`photographer_id`)
+VALUES 
     (1,1);
-
-    INSERT IGNORE INTO `organization_photographer`(`organi_id`,`photographer_id`)
-    VALUES 
+INSERT IGNORE INTO `organization_photographer`(`organi_id`,`photographer_id`)
+VALUES 
     (2,2);
 
-     INSERT IGNORE INTO `organization_photographer`(`organi_id`,`photographer_id`)
-    VALUES 
+INSERT IGNORE INTO `organization_photographer`(`organi_id`,`photographer_id`)
+VALUES 
     (3,3);
 
-    CREATE TABLE
+CREATE TABLE
    IF NOT EXISTS `organization_editor` (
         `organi_id` int (11) NOT NULL DEFAULT '0',
         `editor_id` int (11) NOT NULL DEFAULT '0',
