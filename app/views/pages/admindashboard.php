@@ -11,8 +11,9 @@
 </head>
 
 <body>
-
+<?php var_dump($_SESSION['userData']) ?>
 <div class="topnav">
+
     <div class="test">
       <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
     </div>
