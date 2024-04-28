@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Packages</title>
+  <title>Blog</title>
   <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_blogs.css">
   <script src="<?php echo URLROOT ?>/public/js/pkgfunction.js"></script>
 
@@ -18,10 +18,12 @@
     </div>
 
     <div>
-      <a href="#home">Home</a>
-      <a href="#Blog">Blog</a>
-      <a href="#About us">About Us</a>
-      <a class="active" href="<?php echo URLROOT ?>/PageController/packages">Packages</a>
+      <a href="<?php echo URLROOT ?>/PageController/homepage">Home</a>
+      <a class="active" href="<?php echo URLROOT ?>/PageController/packages">Blog</a>
+      <a href="<?php echo URLROOT ?>/PageController/about">About Us</a>
+      <a href="<?php echo URLROOT ?>/PageController/packages">Packages</a>
+
+
     </div>
 
     <div class="log">
@@ -53,8 +55,7 @@
         </button>
 
         <button type="button" onclick="selectPackage(3)">
-          <img src="<?php echo URLROOT ?>/public/images/get_together_photo.jpg" alt="Get Together" width="100"
-            height="100">
+          <img src="<?php echo URLROOT ?>/public/images/get_together_photo.jpg" alt="Get Together" width="100" height="100">
           <span>Get Together</span>
         </button>
 
@@ -69,8 +70,7 @@
         </button>
 
         <button type="button" onclick="selectPackage(6)">
-          <img src="<?php echo URLROOT ?>/public/images/corporate_event_photo.jpg" alt="Corporate Event" width="100"
-            height="100">
+          <img src="<?php echo URLROOT ?>/public/images/corporate_event_photo.jpg" alt="Corporate Event" width="100" height="100">
           <span>Corporate Event</span>
         </button>
 
@@ -85,8 +85,7 @@
 
     <div class="display" id="display">
       <div class="logo-container">
-        <img src="<?php echo URLROOT ?>/public/images/photography-logo.png" alt="photography-logo" width="150"
-          height="150">
+        <img src="<?php echo URLROOT ?>/public/images/photography-logo.png" alt="photography-logo" width="150" height="150">
       </div>
       <div class="display-text">
         <?php echo $displayContent; ?>

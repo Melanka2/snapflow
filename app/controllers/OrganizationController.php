@@ -11,16 +11,48 @@ class OrganizationController extends Controller
     public function getOrganizations()
     {
         $organizations = $this->organizationModel->getOrganizations();
-    
-    return $organizations;
+
+        return $organizations;
     }
 
     public function getNotAcceptedOrganizations()
     {
         $organizations = $this->organizationModel->getNotAcceptedOrganizations();
-    
-    return $organizations;
+
+        return $organizations;
     }
 
-    
+    public function acceptOrganization()
+    {
+
+        if (isset($_POST['submitAccept'])) {
+            $data = [
+                'id' => $_POST['id'],
+            ];
+        
+            if ($this->organizationModel->acceptOrganization($data)) {
+                header('location:' . URLROOT . '/PageController/admintable');
+            }
+            else{
+                die('Something went wrong');
+            }
+        }
+    }
+
+    public function deleteOrganization()
+    {
+
+        if (isset($_POST['submitDelete'])) {
+            $data = [
+                'id' => $_POST['id'],
+            ];
+        
+            if ($this->organizationModel->deleteOrganization($data)) {
+                header('location:' . URLROOT . '/PageController/admintable');
+            }
+            else{
+                die('Something went wrong');
+            }
+        }
+    }
 }

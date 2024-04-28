@@ -37,11 +37,11 @@ class PageController extends Controller
         $this->view('pages/payment');
     }
 
-    public function adminprofile()
+    public function admintable()
     {
         $organizations = $this->organizationController->getNotAcceptedOrganizations();
         extract($organizations);
-        $this->view('pages/adminprofile',$organizations);
+        $this->view('pages/admintable',$organizations);
     }
 
     public function organization()
@@ -62,6 +62,7 @@ class PageController extends Controller
         $this->view('pages/managerprofile');
     }
 
+    
     public function packages()
     {
         $this->view('pages/packages');
@@ -72,10 +73,16 @@ class PageController extends Controller
         $this->view('pages/feedback');
     }
 
-    public function payment1()
+    public function blog()
     {
-        $this->view('pages/payment1');
+        $this->view('pages/blog');
     }
+
+    public function about()
+    {
+        $this->view('pages/about');
+    }
+
 
     public function paysuccessful()
     {
@@ -94,5 +101,5 @@ class PageController extends Controller
 
    
 
-    
+
 }
