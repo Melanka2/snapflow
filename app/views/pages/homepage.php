@@ -86,9 +86,9 @@
 
   <div class="row">
     <div class="column">
-      <img src="<?php echo URLROOT ?>/public/images/image10.jpg" alt="wedding">
+      <img src="<?php echo URLROOT ?>/public/images/image_2.jpg" alt="wedding">
       <img src="<?php echo URLROOT ?>/public/images/image6.jpg" alt="rock">
-      <img src="<?php echo URLROOT ?>/public/images/image_2.jpg" alt="uno">
+      <img src="<?php echo URLROOT ?>/public/images/image10.jpg" alt="uno">
 
     </div>
     <div class="column">

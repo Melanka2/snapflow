@@ -129,16 +129,13 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` date,
-        `adders` varchar(100) NOT NULL DEFAULT'',
-        `dob` date,
-        PRIMARY KEY (`id`)
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
-INSERT IGNORE INTO `admin` (`first_name`, `last_name`, `user_id`, `reg_date`,`adders`,`dob`)
+INSERT IGNORE INTO `admin` (`first_name`, `last_name`, `user_id`, `reg_date`)
 VALUES
-    ('admin1', 'admin1', 1, '2024-01-01','malabe','2001-09-01');
+    ('admin1', 'admin1', 1, '2024-01-01');
 
 CREATE TABLE
     IF NOT EXISTS `manager` (
@@ -147,20 +144,17 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` date,
-        `adders` varchar(100) NOT NULL DEFAULT'',
-        `dob` date,
-        PRIMARY KEY (`id`)
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
-INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`,`adders`,`dob`)
+INSERT IGNORE INTO `manager` (`first_name`, `last_name`, `user_id`, `reg_date`)
 VALUES
-    ('manager1', 'manager1', 2, '2024-01-01','malabe','2000-08-08'),
-    ('manager2', 'manager2', 3, '2024-01-02','piliyadala','2000-01-01'),
-    ('manager3', 'manager3', 4, '2024-01-03','kottawa','2002-01-06'),
-    ('manager4', 'manager4', 5, '2024-01-04','kahathuduwa','2002-01-09'),
-    ('manager5', 'manager5', 6, '2024-01-05','maththegoda','2000-05-01');
+    ('manager1', 'manager1', 2, '2024-01-01'),
+    ('manager2', 'manager2', 3, '2024-01-02'),
+    ('manager3', 'manager3', 4, '2024-01-03'),
+    ('manager4', 'manager4', 5, '2024-01-04'),
+    ('manager5', 'manager5', 6, '2024-01-05');
 
 CREATE TABLE
     IF NOT EXISTS `editor` (
@@ -169,14 +163,11 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` date,
-        `adders` varchar(100) NOT NULL DEFAULT'',
-        `dob` date,
-        PRIMARY KEY (`id`)
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
-INSERT IGNORE INTO `editor` (`first_name`, `last_name`, `user_id`, `reg_date`,`adders`,`dob`)
+INSERT IGNORE INTO `editor` (`first_name`, `last_name`, `user_id`, `reg_date`)
 VALUES
     ('editor1', 'editor1', 7, '2024-01-01'),
     ('editor2', 'editor2', 8, '2024-01-02'),
@@ -192,14 +183,11 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` date,
-        `adders` varchar(100) NOT NULL DEFAULT'',
-        `dob` date,
-        PRIMARY KEY (`id`)
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
-INSERT IGNORE INTO `photographer` (`first_name`, `last_name`, `user_id`, `reg_date`,`adders`,`dob`)
+INSERT IGNORE INTO `photographer` (`first_name`, `last_name`, `user_id`, `reg_date`)
 VALUES
     ('photography1', 'photography1', 12, '2024-01-01'),
     ('photography2', 'photography2', 13, '2024-01-02'),
@@ -214,8 +202,6 @@ CREATE TABLE
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
         `reg_date` date DEFAULT CURRENT_DATE,
-        `adders` varchar(100) NOT NULL DEFAULT'',
-        `dob` date,
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
