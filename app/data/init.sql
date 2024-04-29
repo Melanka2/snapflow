@@ -128,7 +128,7 @@ CREATE TABLE
         `first_name` varchar(100) NOT NULL DEFAULT '',
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
-        `reg_date` date,
+        `reg_date` date DEFAULT CURRENT_DATE,
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
@@ -143,7 +143,7 @@ CREATE TABLE
         `first_name` varchar(100) NOT NULL DEFAULT '',
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
-        `reg_date` date,
+        `reg_date` date DEFAULT CURRENT_DATE,
         PRIMARY KEY (`id`),
         FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
@@ -157,14 +157,36 @@ VALUES
     ('manager5', 'manager5', 6, '2024-01-05');
 
 CREATE TABLE
+    IF NOT EXISTS `organization` (
+        `organi_id` int (11) NOT NULL AUTO_INCREMENT,
+        `name` varchar(100) UNIQUE NOT NULL DEFAULT '',
+        `description` varchar(100) NOT NULL DEFAULT '',
+        `img_url` varchar(100) NOT NULL DEFAULT '',
+        `manager_id` int (11) NOT NULL UNIQUE,
+        `accepted` boolean NOT NULL DEFAULT '0',
+        PRIMARY KEY (`organi_id`),
+        FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`)
+    );
+
+INSERT IGNORE INTO `organization` (`name`, `description`, `img_url`, `manager_id`)
+VALUES
+    ('organi1', 'organi1', 'img1', 1),
+    ('organi2', 'organi2', 'img2', 2),
+    ('organi3', 'organi3', 'img3', 3),
+    ('organi4', 'organi4', 'img4', 4),
+    ('organi5', 'organi5', 'img5', 5);
+
+CREATE TABLE
     IF NOT EXISTS `editor` (
         `id` int (11) NOT NULL AUTO_INCREMENT,
         `first_name` varchar(100) NOT NULL DEFAULT '',
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
-        `reg_date` date,
+        `reg_date` date DEFAULT CURRENT_DATE,
+        `organi_id` int (11) DEFAULT NULL,
         PRIMARY KEY (`id`),
-        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`)    
     );
 
 INSERT IGNORE INTO `editor` (`first_name`, `last_name`, `user_id`, `reg_date`)
@@ -174,7 +196,6 @@ VALUES
     ('editor3', 'editor3', 9, '2024-01-03'),
     ('editor4', 'editor4', 10, '2024-01-04'),
     ('editor5', 'editor5', 11, '2024-01-05');
- 
 
 CREATE TABLE
     IF NOT EXISTS `photographer` (
@@ -182,9 +203,11 @@ CREATE TABLE
         `first_name` varchar(100) NOT NULL DEFAULT '',
         `last_name` varchar(100) NOT NULL DEFAULT '',
         `user_id` int (11) NOT NULL UNIQUE,
-        `reg_date` date,
+        `reg_date` date DEFAULT CURRENT_DATE,
+        `organi_id` int (11) DEFAULT NULL,
         PRIMARY KEY (`id`),
-        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`),
+        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`)
     );
 
 INSERT IGNORE INTO `photographer` (`first_name`, `last_name`, `user_id`, `reg_date`)
@@ -214,129 +237,6 @@ VALUES
     ('custormer4', 'custormer4', 20),
     ('custormer5', 'custormer5', 21);
 
-
-CREATE TABLE
-    IF NOT EXISTS `payment` (
-        `payment_id` int (11) NOT NULL AUTO_INCREMENT,
-        `user_id` int (11) NOT NULL DEFAULT '0',
-        `amount` int (11) NOT NULL DEFAULT '0',
-        `payment_date` date,
-        PRIMARY KEY (`payment_id`),
-        KEY `user_id` (`user_id`),
-        KEY `payment_date` (`payment_date`)
-    );
-
-INSERT IGNORE INTO `payment` (`user_id`, `amount`, `payment_date`)
-VALUES
-    (1, 100000, '2024-01-01'),
-    (2, 200000, '2024-01-02'),
-    (3, 300000, '2024-01-03'),
-    (4, 400000, '2024-01-04'),
-    (5, 500000, '2024-01-05');
-
-CREATE TABLE
-    IF NOT EXISTS `booking` (
-        `book_id` int (11) NOT NULL AUTO_INCREMENT,
-        `event_type` varchar(100) NOT NULL DEFAULT '',
-        `book_date` date,
-        `event_date` date,
-        `event_id` int (11) NOT NULL DEFAULT '0',
-        `photo_code` int (11) NOT NULL UNIQUE,
-        `payment_id` int (11) NOT NULL UNIQUE,
-        `pack_code` int (11) NOT NULL UNIQUE,
-        PRIMARY KEY (`book_id`)
-    );
-
-INSERT IGNORE INTO `booking` (
-    `event_type`,
-    `book_date`,
-    `event_date`,
-    `event_id`,
-    `photo_code`,
-    `payment_id`,
-    `pack_code`
-)
-VALUES
-    (
-        'wedding',
-        '2024-01-01',
-        '2024-01-01',
-        1,
-        1,
-        1,
-        100
-    ),
-    (
-        'birthday',
-        '2024-01-02',
-        '2024-01-02',
-        2,
-        2,
-        2,
-        101
-    ),
-    ('shoot', '2024-01-03', '2024-01-03', 3, 3, 3, 102);
-
-CREATE TABLE
-    IF NOT EXISTS `photo` (
-        `photo_code` int (11) NOT NULL AUTO_INCREMENT,
-        `url` varchar(100) NOT NULL DEFAULT '',
-        `date` int (11) NOT NULL DEFAULT '0',
-        `album_code` int (11) NOT NULL DEFAULT '0',
-        PRIMARY KEY (`photo_code`)
-    );
-
-INSERT IGNORE INTO `photo` (`photo_code`, `url`, `date`, `album_code`)
-VALUES
-    (1, 'photo1', 2024, 1),
-    (2, 'photo2', 2024, 2),
-    (3, 'photo3', 2024, 3);
-
-CREATE TABLE
-    IF NOT EXISTS `organization` (
-        `organi_id` int (11) NOT NULL AUTO_INCREMENT,
-        `name` varchar(100) UNIQUE NOT NULL DEFAULT '',
-        `description` varchar(100) NOT NULL DEFAULT '',
-        `img_url` varchar(100) NOT NULL DEFAULT '',
-        `manager_id` int (11) NOT NULL DEFAULT 1,
-        `accepted` boolean NOT NULL DEFAULT '0',
-        PRIMARY KEY (`organi_id`)
-    );
-
-INSERT IGNORE INTO `organization` (`name`, `description`, `img_url`)
-VALUES
-    ('organi1', 'organi1', 'img1'),
-    ('organi2', 'organi2', 'img2'),
-    ('organi3', 'organi3', 'img3'),
-    ('organi4', 'organi4', 'img4'),
-    ('organi5', 'organi5', 'img5');
-
-CREATE TABLE
-    IF NOT EXISTS `organization_photographer` (
-        `organi_id` int (11) NOT NULL,
-        `photographer_id` int (11) NOT NULL,
-        PRIMARY KEY (`organi_id`, `photographer_id`)
-    );
-
-INSERT IGNORE INTO `organization_photographer` (`organi_id`, `photographer_id`)
-VALUES
-    (1, 2),
-    (2, 3),
-    (3, 1);
-
-CREATE TABLE
-    IF NOT EXISTS `organization_editor` (
-        `organi_id` int (11) NOT NULL DEFAULT '0',
-        `editor_id` int (11) NOT NULL DEFAULT '0',
-        PRIMARY KEY (`organi_id`, `editor_id`)
-    );
-
-INSERT IGNORE INTO `organization_editor` (`organi_id`, `editor_id`)
-VALUES
-    (1, 1),
-    (2, 2),
-    (3, 3);
-
 CREATE TABLE
     IF NOT EXISTS `package` (
         `pack_code` int (11) NOT NULL AUTO_INCREMENT,
@@ -358,12 +258,109 @@ VALUES
     (102, 'shoot', 40000, 100000);
 
 CREATE TABLE
+    IF NOT EXISTS `booking` (
+        `book_id` int (11) NOT NULL AUTO_INCREMENT,
+        `event_type` varchar(100) NOT NULL DEFAULT '',
+        `book_date` date DEFAULT CURRENT_DATE,
+        `event_date` date,
+        `event_id` int (11) NOT NULL UNIQUE,
+        `pack_code` int (11) NOT NULL,
+        `organi_id` int (11) NOT NULL,
+        PRIMARY KEY (`book_id`),
+        FOREIGN KEY (`pack_code`) REFERENCES `package` (`pack_code`),
+        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`)
+    );
+
+INSERT IGNORE INTO `booking` (`event_type`, `event_date`, `event_id`, `pack_code`, `organi_id`)
+VALUES
+    ('wedding', '2024-01-01', 1, 100, 1),
+    ('birthday', '2024-01-02', 2, 101, 2),
+    ('shoot', '2024-01-03', 3, 102, 3),
+    ('wedding', '2024-01-04', 4, 100, 4),
+    ('birthday', '2024-01-05', 5, 101, 5);
+
+CREATE TABLE
+    IF NOT EXISTS `payment` (
+        `payment_id` int (11) NOT NULL AUTO_INCREMENT,
+        `amount` int (11) NOT NULL DEFAULT '0',
+        `payment_date` date,
+        `book_id` int (11) NOT NULL UNIQUE,
+        PRIMARY KEY (`payment_id`),
+        FOREIGN KEY (`book_id`) REFERENCES `booking` (`book_id`)
+    );
+
+INSERT IGNORE INTO `payment` (`amount`, `payment_date`, `book_id`)
+VALUES
+    ( 100000, '2024-01-01', 1),
+    ( 200000, '2024-01-02', 2),
+    ( 300000, '2024-01-03', 3),
+    ( 400000, '2024-01-04', 4),
+    ( 500000, '2024-01-05', 5);
+
+CREATE TABLE
+    IF NOT EXISTS `photo` (
+        `photo_code` int (11) NOT NULL AUTO_INCREMENT,
+        `url` varchar(100) NOT NULL DEFAULT '',
+        `date` int (11) NOT NULL DEFAULT '0',
+        `album_code` int (11) NOT NULL DEFAULT '0',
+        `editor_id` int (11) NOT NULL ,
+        `book_id` int (11) NOT NULL ,
+        PRIMARY KEY (`photo_code`),
+        FOREIGN KEY (`editor_id`) REFERENCES `editor` (`id`),
+        FOREIGN KEY (`book_id`) REFERENCES `booking` (`book_id`)
+    );
+
+INSERT IGNORE INTO `photo` (`photo_code`, `url`, `date`, `album_code`, `editor_id`, `book_id`)
+VALUES
+    (1, 'photo1', 2024, 1, 1, 1),
+    (2, 'photo2', 2024, 2, 2, 2),
+    (3, 'photo3', 2024, 3, 1, 1),
+    (4, 'photo4', 2024, 4, 4, 4),
+    (5, 'photo5', 2024, 5, 5, 5);
+
+
+
+CREATE TABLE
+    IF NOT EXISTS `organization_photographer` (
+        `organi_id` int (11) NOT NULL,
+        `photographer_id` int (11) NOT NULL,
+        PRIMARY KEY (`organi_id`, `photographer_id`),
+        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`),
+        FOREIGN KEY (`photographer_id`) REFERENCES `photographer` (`id`)
+    );
+
+INSERT IGNORE INTO `organization_photographer` (`organi_id`, `photographer_id`)
+VALUES
+    (1, 2),
+    (2, 3),
+    (3, 1);
+
+CREATE TABLE
+    IF NOT EXISTS `organization_editor` (
+        `organi_id` int (11) NOT NULL DEFAULT '0',
+        `editor_id` int (11) NOT NULL DEFAULT '0',
+        PRIMARY KEY (`organi_id`, `editor_id`),
+        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`),
+        FOREIGN KEY (`editor_id`) REFERENCES `editor` (`id`)
+    );
+
+INSERT IGNORE INTO `organization_editor` (`organi_id`, `editor_id`)
+VALUES
+    (1, 1),
+    (2, 2),
+    (3, 3);
+
+
+
+CREATE TABLE
     IF NOT EXISTS `feedback` (
         `comment` varchar(100) DEFAULT NULL,
         `rate` int (11) NOT NULL,
         `organi_id` int (11) NOT NULL,
         `user_id` int (11) NOT NULL,
-        PRIMARY KEY (`organi_id`, `user_id`)
+        PRIMARY KEY (`organi_id`, `user_id`),
+        FOREIGN KEY (`organi_id`) REFERENCES `organization` (`organi_id`),
+        FOREIGN KEY (`user_id`) REFERENCES `user` (`id`)
     );
 
 INSERT IGNORE INTO `feedback` (`comment`, `rate`, `organi_id`, `user_id`)
