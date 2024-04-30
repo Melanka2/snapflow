@@ -3,11 +3,13 @@
 class UserController extends Controller
 {
 
-    var $adminModel;
+    
+    var $userModel;
 
     public function __construct()
     {
-        $this->adminModel = $this->model('Admin');
+      
+        $this->userModel = $this->model('User');
     }
 
     public function signUp()
@@ -15,17 +17,23 @@ class UserController extends Controller
 
         if (isset($_POST['submitSignup'])) {
 
-            // Process form
             // Sanitize POST data
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
+
+            if ($_POST['password'] != $_POST['confirmPassword']) {
+                die('Passwords do not match');
+            }
 
             $password = hash('sha256', $_POST['password']);
             $data = [
                 'email' => trim($_POST['email']),
                 'password' => $password,
+                'role' => $_POST['role'],
+                'firstName' => $_POST['firstName'],
+                'lastName' => $_POST['lastName'],
             ];
 
-            $this->adminModel->signUp($data);
+            $this->userModel->signUp($data);
 
             header('location:' . URLROOT . '/PageController/signIn');
         }
@@ -43,11 +51,13 @@ class UserController extends Controller
             $data = [
                 'email' => trim($_POST['email']),
                 'password' => $password,
+                
             ];
-
-            if ($this->adminModel->signIn($data)) {
+            $userData=$this->userModel->signIn($data);
+            if ($userData) {
                 session_start();
                 $_SESSION['email'] = $data['email'];
+                $_SESSION['userData'] = $userData;
                 header('location:' . URLROOT . '/PageController/admindashboard/' . $data['email']);
           
             };

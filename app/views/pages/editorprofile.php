@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Editor Profile</title>
-        <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_editorprofile.css">
-    </head>
+
+<head>
+  <title>Editor Profile</title>
+  <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_editorprofile.css">
+</head>
+
 <body>
 
 <div class="topnav">
@@ -37,27 +39,27 @@
     <h3>settings</h3>
 </div><br><br>
 
-<!--need to add upload folder, name, date-->
-<div class="right">
-<h3><b>Client Chosen Photos</b></h3>
+    <!--need to add upload folder, name, date-->
+    <div class="right">
+      <h3><b>Client Chosen Photos</b></h3>
 
-<!--need to add choose photo list-->
+      <!--need to add choose photo list-->
 
-<h3><b>Client Feedback</b></h3>
-<fieldset>
-<div class="rating">
-         <i class="rating__star far fa-star"></i>
-         <i class="rating__star far fa-star"></i>
-         <i class="rating__star far fa-star"></i>
-         <i class="rating__star far fa-star"></i>
-         <i class="rating__star far fa-star"></i>
-</div>
-<div>
-<p>This is a Feeedback!This is a Feedback!This is a Feedback!This is a Feedback!This is a Feedback!</p>
-</div>
-</div>
+      <h3><b>Client Feedback</b></h3>
+      <fieldset>
+        <div class="rating">
+          <i class="rating__star far fa-star"></i>
+          <i class="rating__star far fa-star"></i>
+          <i class="rating__star far fa-star"></i>
+          <i class="rating__star far fa-star"></i>
+          <i class="rating__star far fa-star"></i>
+        </div>
+        <div>
+          <p>This is a Feeedback!This is a Feedback!This is a Feedback!This is a Feedback!This is a Feedback!</p>
+        </div>
+    </div>
 
-</fieldset>
+    </fieldset>
 </body>
 
 
