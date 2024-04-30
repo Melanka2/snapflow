@@ -22,15 +22,12 @@
     <div class="log">
       <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
       <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
+
     </div>
   </div><br><br>
-  <div class="a">
+  <div class="container glass"></div>
   <h1> About Us</h1>
-  </div>
-    
-    <div class="container">
-    <div class="jumbotron myBackground">
-    <img src="<?php echo URLROOT ?>/public/images/about1.1.jpeg" alt="wedding 1" width="100%" height="100%" >
+    <!--<img src="<?php echo URLROOT ?>/public/images/about1.1.jpeg" alt="wedding 1" width="100%" height="100%" >-->
     <!--<img src="about2.jpeg" alt="collage of girls"  width="330px" height="330px">-->
     <!--<style>
         img  {
@@ -49,7 +46,6 @@
 <p>Our platform cultivates a thriving community where photographers and clients converge, exchanging expertise and inspiration. Through seamless event photography management, we foster collaboration, sparking creativity, and ensuring every moment is captured with passion and precision, enriching experiences and forging lasting connections.</p>
 <br><br>
     </div> 
-    </div>
 </body>
 <!--
 <div id="box">

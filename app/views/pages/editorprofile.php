@@ -6,22 +6,26 @@
     </head>
 <body>
 
-<script src="editorprofile.js"></script>
 <div class="topnav">
     <div class="test">
       <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
     </div>
     <div>
       <a class="active" href="#home">Home</a>
-      <a href="#Blog">Blog</a>
-      <a href="#About us">About Us</a>
-      <a href="#Packages">Packages</a>
+      <a href="<?php echo URLROOT ?>/PageController/blog">Blog</a>
+      <a href="<?php echo URLROOT ?>/PageController/about us">About Us</a>
+      <a href="<?php echo URLROOT ?>/PageController/packages">Packages</a>
     </div>
     <div class="log">
       <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
       <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
     </div>
   </div>
+
+<script src="editorprofile.js"></script>
+
+   
+
 
     <div class="wrapper">
         <div class="left">

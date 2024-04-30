@@ -33,11 +33,23 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    list-style: none;
-    font-family: sans-serif;
+    font-family:'Poppins',sans-serif;
+  }
+  .user-pic{
+    width: 40px;
+    border-radius: 50%;
+    cursor:pointer;
+    margin-left: 30px;
   }
 
-  body{
+  .sub-menu-wrap{
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    width: 320px;
+  }
+
+  /*body{
     background-color: #FFFFFF;
   }
 
@@ -71,8 +83,3 @@
 
   span.d {
     display: inline; /*the default for span*/
-    width: 100px;
-    height: 100px;
-    padding: 5px;
-    border: 0px;
-  }

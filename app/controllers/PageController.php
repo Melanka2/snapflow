@@ -45,11 +45,11 @@ class PageController extends Controller
         $this->view('pages/admintable',$organizations);
     }
 
-    public function blog()
+    public function organization()
     {
         $organizations = $this->organizationController->getOrganizations();
         extract($organizations);
-        $this->view('pages/blog', $organizations);
+        $this->view('pages/organization', $organizations);
     }
     
     public function photographerprofile()
@@ -73,11 +73,29 @@ class PageController extends Controller
         $this->view('pages/feedback');
     }
 
+    public function about()
+    {
+        $this->view('pages/about');
+    }
+    
+
     public function blog()
     {
         $this->view('pages/blog');
     }
 
+    public function userprofile()
+    {
+        $this->view('pages/userprofile');
+    }
+
+
+    public function editorprofile()
+    {
+        $this->view('pages/editorprofile');
+    }
+
+   
 
 
    

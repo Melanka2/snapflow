@@ -1,36 +1,54 @@
 .topnav {
   
-   background-color: #F9EAF2;
-   text-align: center;
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
- }
- 
-  .topnav a {
-   float: center;
-   color: #151515;
-   text-align: center;
-   padding: 14px 16px;
-   text-decoration: none;
-   font-size: 17px;
- }
- 
- .topnav a:hover {
-   background-color: #e7b1b1;
-   color: rgb(20, 19, 19);
-   border-radius: 20%;
- }
- 
- .topnav a.active {
-   background-color: #e7b1b1;
-   color: rgb(28, 28, 28);
-   border-radius: 20%;
-   
- } 
+  background-color: #F9EAF2;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+ .topnav a {
+  float: center;
+  color: #151515;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #e7b1b1;
+  color: rgb(20, 19, 19);
+  border-radius: 20%;
+}
+
+.topnav a.active {
+  background-color: #e7b1b1;
+  color: rgb(28, 28, 28);
+  border-radius: 20%;
+  
+} 
+.login-btn{
+display: none;
+}
+.signup-btn{
+ display: none;
+}
+.log{
+    color: black;
+    background-color: #F9EAF2;
+    text-align: right;
+    font-size: 20px;
+    float: right;
+    border-color: black;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20%;
+    
+}
 
 
-/*ratings*/
+/*ratings
 body {
     height: 100vh;
     display: grid;
@@ -100,4 +118,4 @@ body {
    padding: 30px 25px;
    border-top-right-radius: 5px;
    border-bottom-right-radius: 5px;
- }
+ }*/

@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-   <title>User Profile</title>
+   <meta name="viewport" conten="width=device-width, initial-scale=1,0">
+   <title>User-Profile Menu</title>
    <link rel="stylesheet" href="<?php echo URLROOT ?>/public/css/style_userprofile.css">
 </head>
 <body>
@@ -15,21 +16,26 @@
       <a href="#About us">About Us</a>
       <a href="#Packages">Packages</a>
     </div>
+       <img src="<?php echo URLROOT ?>/public/images/user1.jpg" class="user-pic" alt="user" width="100">
+
+       <div class="sub-menu-wrap">
+        <div class="sub-menu">
+          <div class="user-info">
+            <img src="images/user1.jpg">
+            <h2>Anumi Inupama</h2>
+       
     <div class="log">
       <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
       <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
     </div>
-  </div>
-<div class="wrapper">
-    <div class="left">
-                <h3>User Profile</h3>
-                <br><br>
-                <div><h4><span class="a"><img src=""></span> User Info</h4></div><br>
-                <div><h4><span class="b"><img src="images/editing.jpg"></span>Editing</h4></div><br>
-                <div><h4><span class="c"><img src="images/settings.jpg"></span>Settings</h4></div><br>
-                <div><h4><span class="d"><img src="images/download_folders.jpg"></span>Download Folders</h4></div><br>
-    </div><br><br>
-    <div class="right">
+</div>
+
+  <!--<div><h4><span class="a"><img src=""></span> User Info</h4></div><br>
+  <div><h4><span class="b"><img src="images/editing.jpg"></span>Editing</h4></div><br>
+  <div><h4><span class="c"><img src="images/settings.jpg"></span>Settings</h4></div><br>
+  <div><h4><span class="d"><img src="images/download_folders.jpg"></span>Download Folders</h4></div><br>
+    </div>--><br><br>
+    <!--<div class="right">
         <div class="profile-info">
             <h3>Anumi Inupama</h3>
             <br> <br>
@@ -54,7 +60,7 @@
                 <input type="EmergContact" id="EmergContact" name="EmergContact" required><br><br>
 
                 <input type="submit" value="save changes">
-        </form>
+        </form>-->
         </div>
 </div>
 

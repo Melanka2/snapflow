@@ -29,9 +29,8 @@ img  {
   }
   
   .topnav a:hover {
-    background-color: #e7b1b1;
+    background-color: #ddd;
     color: rgb(20, 19, 19);
-    border-radius: 20%;
   }
   
   .topnav a.active {
@@ -40,7 +39,49 @@ img  {
     border-radius: 20%;
     
   } 
-/*
+  .login-btn {
+    display: none;
+  }
+  
+  .signup-btn {
+    display: none;
+  }
+  
+  .log {
+    color: black;
+    background-color: #F9EAF2;
+    text-align: right;
+    font-size: 20px;
+    float: right;
+    border-color: black;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 20%;
+  
+  }
+
+  body{
+    background: url("");
+    background-size: 100%;
+    background-position: center;
+  }
+
+  .container{
+    width: 500px;
+    height: 300px;
+    margin: 200px auto;
+  }
+
+  .glass{
+    background: linear-gradient(135deg, rgba(255,255,255,0.1),rgba(255,255,255,0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  }
+
+  /*
 body {
     margin: 0;
     padding: 0;
@@ -88,5 +129,4 @@ section {
 .myBackground {
   background-color: rgba(255,255,255, 0.5);
   color: inherit;
-}
-*/
+}*/
