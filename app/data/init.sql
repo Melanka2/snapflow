@@ -159,7 +159,7 @@ VALUES
 CREATE TABLE
     IF NOT EXISTS `organization` (
         `organi_id` int (11) NOT NULL AUTO_INCREMENT,
-        `name` varchar(100) UNIQUE NOT NULL DEFAULT '',
+        `orname` varchar(100) UNIQUE NOT NULL DEFAULT '',
         `description` varchar(100) NOT NULL DEFAULT '',
         `img_url` varchar(100) NOT NULL DEFAULT '',
         `manager_id` int (11) NOT NULL UNIQUE,
@@ -168,7 +168,7 @@ CREATE TABLE
         FOREIGN KEY (`manager_id`) REFERENCES `manager` (`id`)
     );
 
-INSERT IGNORE INTO `organization` (`name`, `description`, `img_url`, `manager_id`)
+INSERT IGNORE INTO `organization` (`orname`, `description`, `img_url`, `manager_id`)
 VALUES
     ('organi1', 'organi1', 'img1', 1),
     ('organi2', 'organi2', 'img2', 2),
