@@ -16,7 +16,7 @@
       <a href="#About us">About Us</a>
       <a href="#Packages">Packages</a>
     </div>
-	
+
     <div class="log">
       <a href="<?php echo URLROOT ?>/PageController/signup">Signup</a>
       <a href="<?php echo URLROOT ?>/PageController/signIn">Login</a>
@@ -53,7 +53,7 @@
 				</select>
 				<br><br>
 				
-				<label>Photographer Name</label>
+				<label>Organization    Name</label>
 				<select>
 					<option value="p1">Lakshan</option>
 					<option value="p2">Kasun</option>
