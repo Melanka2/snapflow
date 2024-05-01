@@ -1,13 +1,13 @@
-
-
 boby{
     margin: 0;
-    padding: 0;
-    background:url("https://www.mili-lo.com/wp-content/uploads/2021/11/Wedding-Day-Photos.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  padding: 0;
+  background:url("https://i.pinimg.com/564x/7e/70/94/7e70943341f1bda125579c9512c8cac5.jpg");
+  font-family: Arial, sans-serif;
+  background-color: #fffcfc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .h1{

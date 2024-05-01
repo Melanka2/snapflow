@@ -12,7 +12,7 @@
 
   <div class="topnav">
     <div class="test">
-      <img src="<?php echo URLROOT ?>/public/images/logo new 2.png" alt="logo" width="120">
+      <img src="<?php echo URLROOT ?>/public/images/logo.png" alt="logo" width="120">
     </div>
     <div>
       <a class="active" href="#home">Home</a>
@@ -31,7 +31,7 @@
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/baby 2.jpg" alt="wedding 1" width="100%" height="700" >
+  <img src="<?php echo URLROOT ?>/public/images/home 8.jpg" alt="wedding 1" width="100%" height="700" >
   
 </div>
 
@@ -78,10 +78,18 @@
         <option value="Get">Get</option>
 
       </select>
-      <button class="search-btn" type="submit">Search</button>
+      <?php foreach ($data as $row) : ?>
+    
+          <form method="post" action="<?php echo URLROOT; ?>/OrganizationController/searchOrganization">
+            <input type="hidden" name="date" value="<?php echo $row->event_date; ?>">
+            <input type="hidden" name="type" value="<?php echo $row->event_type; ?>">
+            <button class="search-btn" name="submitSearch" value="submit" type="submit">Search</button>
+          </form>
+          <?php endforeach; ?>
+
     </div>
   </div>
-
+ 
   <h1>Stories</h1><br>
 
   <div class="row">
