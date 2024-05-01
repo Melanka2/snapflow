@@ -39,7 +39,7 @@
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
-      <p class="testimonial-company"><?php echo $organization->name; ?>  </p>
+      <p class="testimonial-company"><?php echo $organization->orname; ?>  </p>
     </div>
     <?php endforeach; ?>
   

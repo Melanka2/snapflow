@@ -1,3 +1,15 @@
-h1{
+
+
+boby{
+    margin: 0;
+    padding: 0;
+    background:url("https://www.mili-lo.com/wp-content/uploads/2021/11/Wedding-Day-Photos.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.h1{
     font-size: 32px;
    }
