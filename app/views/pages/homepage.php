@@ -12,7 +12,7 @@
 
   <div class="topnav">
     <div class="test">
-      <img src="<?php echo URLROOT ?>/public/images/logo new 2.png" alt="logo" width="120">
+      <img src="<?php echo URLROOT ?>/public/images/logo.png" alt="logo" width="120">
     </div>
     <div>
       <a class="active" href="#home">Home</a>
@@ -31,13 +31,13 @@
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/home 1.jpg" alt="wedding 1" width="100%" height="700" >
+  <img src="<?php echo URLROOT ?>/public/images/home 8.jpg" alt="wedding 1" width="100%" height="700" >
   
 </div>
 
 <div class="mySlides fade">
   <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/image 1.jpg" alt="girl" width="100%" height="700">
+  <img src="<?php echo URLROOT ?>/public/images/baby 1.jpg" alt="girl" width="100%" height="700">
   
 </div>
 
@@ -78,29 +78,37 @@
         <option value="Get">Get</option>
 
       </select>
-      <button class="search-btn" type="submit">Search</button>
+      <?php foreach ($data as $row) : ?>
+    
+          <form method="post" action="<?php echo URLROOT; ?>/OrganizationController/searchOrganization">
+            <input type="hidden" name="date" value="<?php echo $row->event_date; ?>">
+            <input type="hidden" name="type" value="<?php echo $row->event_type; ?>">
+            <button class="search-btn" name="submitSearch" value="submit" type="submit">Search</button>
+          </form>
+          <?php endforeach; ?>
+
     </div>
   </div>
-
+ 
   <h1>Stories</h1><br>
 
   <div class="row">
     <div class="column">
-      <img src="<?php echo URLROOT ?>/public/images/image10.jpg" alt="wedding">
+      <img src="<?php echo URLROOT ?>/public/images/home 5.jpg" alt="wedding">
       <img src="<?php echo URLROOT ?>/public/images/image6.jpg" alt="rock">
-      <img src="<?php echo URLROOT ?>/public/images/image_2.jpg" alt="uno">
+      
 
     </div>
     <div class="column">
-      <img src="<?php echo URLROOT ?>/public/images/image4.jpg" alt="uno">
-      <img src="<?php echo URLROOT ?>/public/images/image 12.jpg" alt="ocun">
-      <img src="<?php echo URLROOT ?>/public/images/image9.jpeg" alt="rock">
+      <img src="<?php echo URLROOT ?>/public/images/home 8.jpg" alt="uno">
+      <img src="<?php echo URLROOT ?>/public/images/image4.jpg" alt="ocun">
+      <img src="<?php echo URLROOT ?>/public/images/home 6.jpg" alt="rock">
     </div>
 
     <div class="column">
       <img src="<?php echo URLROOT ?>/public/images/image8.jpg" alt="falls">
-      <img src="<?php echo URLROOT ?>/public/images/image7.jpeg" alt="ocun">
-      <img src="<?php echo URLROOT ?>/public/images/image4.jpg" alt="wedding">
+      <img src="<?php echo URLROOT ?>/public/images/image_2.jpg" alt="ocun">
+      <img src="<?php echo URLROOT ?>/public/images/image7.jpeg" alt="wedding">
     </div>
   </div>
   </div>

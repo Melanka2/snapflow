@@ -8,7 +8,7 @@ body {
 
 .topnav {
   
-  background-color: #080808;
+  background-color: #204369;
   text-align: center;
   display: flex;
   align-items: center;
@@ -44,7 +44,7 @@ display: none;
 }
 .log{
     color: black;
-    background-color: #0d0e0e;
+    background-color: #204369;
     text-align: right;
     font-size: 20px;
     float: right;
@@ -65,7 +65,7 @@ display: none;
   right: 800;
   width: 16%;
   text-align: 100px;
-  background-color: #070808;
+  background-color: #204369;
   
 }
 
@@ -84,14 +84,14 @@ display: none;
 .data-input{
   margin-right: 10px;
   color: #0b0b0b;
-  background-color: rgb(207, 202, 202);
+  background-color:  #c3cfe1;
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 25px;
 }
 .select-input{
   color: #0a0909;
-  background-color: rgb(210, 206, 206);
+  background-color:  #c3cfe1;
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 20px;
@@ -99,7 +99,7 @@ display: none;
 }
 .search-btn{
   color: #fcf9f9;
-  background-color: #7f7e7f;
+  background-color:  #7796c4;
   padding: 10px 10px;
   border-radius: 8px;
   font-size: 20px;
@@ -110,7 +110,7 @@ display: none;
   top: 50px;
   right: 900px;
   background-color: rgb(200, 155, 142);
-  color: rgb(3, 3, 3);
+  color: rgb(253, 245, 245);
   padding-left: 30px;
   font-style: italic;
   width: 40%;

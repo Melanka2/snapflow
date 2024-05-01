@@ -55,4 +55,23 @@ class OrganizationController extends Controller
             }
         }
     }
+
+
+    public function searchOrganization ()
+    {
+
+        if (isset($_POST['submitSearch'])) {
+            $data = [
+                'date' => $_POST['date'],
+                'type' => $_POST['type'],
+            ];
+        
+            if ($this->organizationModel->searchOrganization($data)) {
+                header('location:' . URLROOT . '/PageController/organization');
+            }
+            else{
+                die('Something went wrong');
+            }
+        }
+    }
 }

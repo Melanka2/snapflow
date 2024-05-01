@@ -65,4 +65,19 @@ class Organization {
     }
 
 
+    public function searchOrganization($data)
+    {
+
+        $this->db->query('SELECT * FROM organization INNER JOIN booking on organization.organi_id = booking.organi_id WHERE booking.event_date <> :date or event_type <> :type');
+        $this->db->bind(':date', $data['date']);
+        $this->db->bind(':type', $data['type']);
+        $rows = $this->db->resultSet();
+        if ($this->db->rowCount() > 0) {
+            return $rows;
+        } else {
+            return false;
+        }
+    }
+
+
 }
