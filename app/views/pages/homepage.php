@@ -27,40 +27,41 @@
   </div>
 
   <div class="center">
-  <div class="slideshow-container">
+    <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/home 8.jpg" alt="wedding 1" width="100%" height="700" >
-  
-</div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="<?php echo URLROOT ?>/public/images/home 8.jpg" alt="wedding 1" width="100%" height="700">
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/baby 1.jpg" alt="girl" width="100%" height="700">
-  
-</div>
+      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/home3.png"  alt="wedding 3" width="100%" height="700" >
-  
-</div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="<?php echo URLROOT ?>/public/images/baby 1.jpg" alt="girl" width="100%" height="700">
 
-  </div>
-  <br>
+      </div>
 
-  <div style="text-align:center">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-    
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="<?php echo URLROOT ?>/public/images/home3.png" alt="wedding 3" width="100%" height="700">
+
+      </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
     <div class="text-block_1">
-      
-        <h2>Welcome to
+
+      <h2>Welcome to
         <b>SnapFlow</b>
-        Event Photography !</h2>
+        Event Photography !
+      </h2>
     </div>
     <div class="text-block_2">
       <p>
@@ -69,34 +70,29 @@
     </div>
 
     <div class="centered">
-      <label for="date">Date:</label>
-      <input class="data-input" type="date" id="date" name="date">
-      <label for="category">Category:</label>
-      <select class="select-input" id="category" name="category">
-        <option value="Wedding">Wedding</option>
-        <option value="Birthday">Birthday</option>
-        <option value="Get">Get</option>
+      <form method="post" action="<?php echo URLROOT; ?>/OrganizationController/searchOrganization">
+        <label for="date">Date:</label>
+        <input class="data-input" type="date" id="date" name="date">
+        <label for="category">Category:</label>
+        <select class="select-input" id="category" name="type">
+          <option value="Wedding">Wedding</option>
+          <option value="Birthday">Birthday</option>
+          <option value="Get">Get</option>
+        </select>
+        <button class="search-btn" name="submitSearch" value="submit" type="submit">Search</button>
+      </form>
 
-      </select>
-      <?php foreach ($data as $row) : ?>
-    
-          <form method="post" action="<?php echo URLROOT; ?>/OrganizationController/searchOrganization">
-            <input type="hidden" name="date" value="<?php echo $row->event_date; ?>">
-            <input type="hidden" name="type" value="<?php echo $row->event_type; ?>">
-            <button class="search-btn" name="submitSearch" value="submit" type="submit">Search</button>
-          </form>
-          <?php endforeach; ?>
 
     </div>
   </div>
- 
+
   <h1>Stories</h1><br>
 
   <div class="row">
     <div class="column">
       <img src="<?php echo URLROOT ?>/public/images/home 5.jpg" alt="wedding">
       <img src="<?php echo URLROOT ?>/public/images/image6.jpg" alt="rock">
-      
+
 
     </div>
     <div class="column">

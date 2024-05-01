@@ -41,28 +41,33 @@ class PageController extends Controller
     {
         $organizations = $this->organizationController->getNotAcceptedOrganizations();
         extract($organizations);
-        $this->view('pages/admintable',$organizations);
+        $this->view('pages/admintable', $organizations);
     }
 
     public function organization()
     {
-        $organizations = $this->organizationController->getOrganizations();
+        session_start();
+        if (!isset($_SESSION['data'])) {
+            header('Location: ' . URLROOT . '/PageController/homepage');
+        }
+        
+        $organizations = $_SESSION['data'];
         extract($organizations);
         $this->view('pages/organization', $organizations);
     }
-    
+
     public function photographerprofile()
     {
         $this->view('pages/photographerprofile');
     }
 
-     
+
     public function managerprofile()
     {
         $this->view('pages/managerprofile');
     }
 
-    
+
     public function packages()
     {
         $this->view('pages/packages');
@@ -98,8 +103,4 @@ class PageController extends Controller
     {
         $this->view('pages/booking1');
     }
-
-   
-
-
 }

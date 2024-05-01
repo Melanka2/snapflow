@@ -29,11 +29,10 @@ class OrganizationController extends Controller
             $data = [
                 'id' => $_POST['id'],
             ];
-        
+
             if ($this->organizationModel->acceptOrganization($data)) {
                 header('location:' . URLROOT . '/PageController/admintable');
-            }
-            else{
+            } else {
                 die('Something went wrong');
             }
         }
@@ -46,18 +45,17 @@ class OrganizationController extends Controller
             $data = [
                 'id' => $_POST['id'],
             ];
-        
+
             if ($this->organizationModel->deleteOrganization($data)) {
                 header('location:' . URLROOT . '/PageController/admintable');
-            }
-            else{
+            } else {
                 die('Something went wrong');
             }
         }
     }
 
 
-    public function searchOrganization ()
+    public function searchOrganization()
     {
 
         if (isset($_POST['submitSearch'])) {
@@ -65,11 +63,13 @@ class OrganizationController extends Controller
                 'date' => $_POST['date'],
                 'type' => $_POST['type'],
             ];
-        
-            if ($this->organizationModel->searchOrganization($data)) {
+
+            $organizations=$this->organizationModel->searchOrganization($data);
+            if ($organizations) {
+                session_start();
+                $_SESSION['data'] = $organizations;
                 header('location:' . URLROOT . '/PageController/organization');
-            }
-            else{
+            } else {
                 die('Something went wrong');
             }
         }
