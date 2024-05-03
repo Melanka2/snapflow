@@ -3,20 +3,14 @@
 class Organization {
 
  private $db;
-    private static $instance;
 
-    private function __construct()
+
+    public function __construct()
     {
-        $this->db = new Database;
+        $this->db = new Database();
     }
 
-    public static function getInstance()
-    {
-        if (!isset(self::$instance)) {
-            self::$instance = new Organization();
-        }
-        return self::$instance;
-    }
+
 
     public  function getOrganizations()
     {

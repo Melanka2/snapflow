@@ -1,5 +1,7 @@
 
 <?php
+require_once '../app/models/User.php';
+
 class UserController extends Controller
 {
 
@@ -9,7 +11,7 @@ class UserController extends Controller
     public function __construct()
     {
       
-        $this->userModel = $this->model('User');
+        $this->userModel = new User();
     }
 
     public function signUp()

@@ -1,4 +1,5 @@
 <?php
+require_once '../app/controllers/OrganizationController.php';
 
 class PageController extends Controller
 {
@@ -7,7 +8,7 @@ class PageController extends Controller
 
     public function __construct()
     {
-        $this->organizationController = $this->controller('OrganizationController');
+        $this->organizationController = new OrganizationController();
     }
 
     public function index()

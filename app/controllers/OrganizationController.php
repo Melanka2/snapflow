@@ -1,11 +1,14 @@
 <?php
+
+require_once '../app/models/Organization.php';
+
 class OrganizationController extends Controller
 {
     var $organizationModel;
 
     public function __construct()
     {
-        $this->organizationModel = $this->model('Organization');
+        $this->organizationModel = new Organization();
     }
 
     public function getOrganizations()
