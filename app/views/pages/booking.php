@@ -23,7 +23,7 @@
     </div>
   </div>
 
-<img class="img-booking" src="<?php echo URLROOT ?>/public/img/booking.jpg">
+
 
 <div class="padding">
 	<form style="background-color:#E6E6FA">
