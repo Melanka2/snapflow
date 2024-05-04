@@ -85,12 +85,13 @@
 </div>
 </div>
 
-  
+  <div>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script src="<?php echo URLROOT ?>/public/js/barChart.js"></script>
-
+  
     <script src="<?php echo URLROOT ?>/public/js/pieChart.js"></script>
+  </div>
 
     <script src="<?php echo URLROOT ?>/public/js/lineChart.js"></script>
 

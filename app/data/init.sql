@@ -13,7 +13,7 @@ CREATE TABLE
         PRIMARY KEY (`id`)
     );
 
-/*mayashi*/
+
 INSERT IGNORE INTO `user` (`email`, `password`, `role`)
 VALUES
     (

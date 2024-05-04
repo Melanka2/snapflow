@@ -58,7 +58,12 @@ display: none;
 .center {
   position: sticky;
   display: block;
-  object-fit: cover;  
+  object-fit: cover; 
+ 
+}
+
+.slideshow-container{
+  display: flexbox;
 }
 
 .test{
@@ -111,7 +116,7 @@ display: none;
   right: 900px;
   background-color: rgb(200, 155, 142);
   color: rgb(253, 245, 245);
-  padding-left: 30px;
+  padding-left: 200px;
   font-style: italic;
   width: 40%;
   height: 0px;
