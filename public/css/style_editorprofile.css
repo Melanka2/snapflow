@@ -1,3 +1,10 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
+  box-sizing: border-box;
+}
+
 .topnav {
   
   background-color: #F9EAF2;
@@ -5,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 }
 
  .topnav a {
@@ -45,6 +53,10 @@ display: none;
     cursor: pointer;
     border-radius: 20%;
     
+}
+
+.user-pic{
+  width: ;
 }
 
 

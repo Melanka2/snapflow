@@ -14,9 +14,9 @@
       <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
     </div>
     <div>
-      <a class="active" href="#home">Home</a>
+      <a href="#home">Home</a>
       <a href="#Blog">Blog</a>
-      <a href="#About us">About Us</a>
+      <a class="active" href="#About us">About Us</a>
       <a href="#Packages">Packages</a>
     </div>
     <div class="log">
@@ -25,9 +25,10 @@
 
     </div>
   </div><br><br>
-  <div class="container glass"></div>
-  <h1> About Us</h1>
-    <!--<img src="<?php echo URLROOT ?>/public/images/about1.1.jpeg" alt="wedding 1" width="100%" height="100%" >-->
+  <div class="a">
+  <h1>About Us</h1>
+</div>
+    <img src="<?php echo URLROOT ?>/public/images/about_us.jpeg" alt="wedding 1" width="100%" height="100%" >
     <!--<img src="about2.jpeg" alt="collage of girls"  width="330px" height="330px">-->
     <!--<style>
         img  {
@@ -36,6 +37,7 @@
             margin-left:auto;
         }
     </style>-->
+  <div class="container glass">
 <h2>Our Mission.</h2>
 <p>"To capture the essence of every moment, preserving memories that transcend time, through exceptional event photography."</p>
 <br><br>
@@ -45,7 +47,7 @@
 <h2>Community & Engagement.</h2>
 <p>Our platform cultivates a thriving community where photographers and clients converge, exchanging expertise and inspiration. Through seamless event photography management, we foster collaboration, sparking creativity, and ensuring every moment is captured with passion and precision, enriching experiences and forging lasting connections.</p>
 <br><br>
-    </div> 
+</div> </div> 
 </body>
 <!--
 <div id="box">
