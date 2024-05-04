@@ -12,7 +12,7 @@
 
   <div class="topnav">
     <div class="test">
-      <img src="<?php echo URLROOT ?>/public/images/logo new 2.png" alt="logo" width="120">
+      <img src="<?php echo URLROOT ?>/public/images/logo.png" alt="logo" width="120">
     </div>
     <div>
       <a class="active" href="#home">Home</a>
@@ -27,40 +27,41 @@
   </div>
 
   <div class="center">
-  <div class="slideshow-container">
+    <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/home 1.jpg" alt="wedding 1" width="100%" height="700" >
-  
-</div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="<?php echo URLROOT ?>/public/images/image10.jpg" alt="wedding 1" width="100%" height="700">
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/image 1.jpg" alt="girl" width="100%" height="700">
-  
-</div>
+      </div>
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="<?php echo URLROOT ?>/public/images/home3.png"  alt="wedding 3" width="100%" height="700" >
-  
-</div>
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="<?php echo URLROOT ?>/public/images/baby 1.jpg" alt="girl" width="100%" height="700">
 
-  </div>
-  <br>
+      </div>
 
-  <div style="text-align:center">
-    <span class="dot"></span>
-    <span class="dot"></span>
-    <span class="dot"></span>
-  </div>
-    
+      <div class="mySlides fade">
+        <div class="numbertext"></div>
+        <img src="<?php echo URLROOT ?>/public/images/home3.png" alt="wedding 3" width="100%" height="700">
+
+      </div>
+
+    </div>
+    <br>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+
     <div class="text-block_1">
-      
-        <h2>Welcome to
+
+      <h2>Welcome to
         <b>SnapFlow</b>
-        Event Photography !</h2>
+        Event Photography !
+      </h2>
     </div>
     <div class="text-block_2">
       <p>
@@ -69,16 +70,19 @@
     </div>
 
     <div class="centered">
-      <label for="date">Date:</label>
-      <input class="data-input" type="date" id="date" name="date">
-      <label for="category">Category:</label>
-      <select class="select-input" id="category" name="category">
-        <option value="Wedding">Wedding</option>
-        <option value="Birthday">Birthday</option>
-        <option value="Get">Get</option>
+      <form method="post" action="<?php echo URLROOT; ?>/OrganizationController/searchOrganization">
+        <label for="date">Date:</label>
+        <input class="data-input" type="date" id="date" name="date">
+        <label for="category">Category:</label>
+        <select class="select-input" id="category" name="type">
+          <option value="Wedding">Wedding</option>
+          <option value="Birthday">Birthday</option>
+          <option value="Get">Get</option>
+        </select>
+        <button class="search-btn" name="submitSearch" value="submit" type="submit">Search</button>
+      </form>
 
-      </select>
-      <button class="search-btn" type="submit">Search</button>
+
     </div>
   </div>
 
@@ -86,21 +90,21 @@
 
   <div class="row">
     <div class="column">
-      <img src="<?php echo URLROOT ?>/public/images/image10.jpg" alt="wedding">
+      <img src="<?php echo URLROOT ?>/public/images/home 5.jpg" alt="wedding">
       <img src="<?php echo URLROOT ?>/public/images/image6.jpg" alt="rock">
-      <img src="<?php echo URLROOT ?>/public/images/image_2.jpg" alt="uno">
+
 
     </div>
     <div class="column">
-      <img src="<?php echo URLROOT ?>/public/images/image4.jpg" alt="uno">
-      <img src="<?php echo URLROOT ?>/public/images/image 12.jpg" alt="ocun">
-      <img src="<?php echo URLROOT ?>/public/images/image9.jpeg" alt="rock">
+      <img src="<?php echo URLROOT ?>/public/images/home 8.jpg" alt="uno">
+      <img src="<?php echo URLROOT ?>/public/images/image4.jpg" alt="ocun">
+      <img src="<?php echo URLROOT ?>/public/images/home 6.jpg" alt="rock">
     </div>
 
     <div class="column">
       <img src="<?php echo URLROOT ?>/public/images/image8.jpg" alt="falls">
-      <img src="<?php echo URLROOT ?>/public/images/image7.jpeg" alt="ocun">
-      <img src="<?php echo URLROOT ?>/public/images/image4.jpg" alt="wedding">
+      <img src="<?php echo URLROOT ?>/public/images/image_2.jpg" alt="ocun">
+      <img src="<?php echo URLROOT ?>/public/images/image7.jpeg" alt="wedding">
     </div>
   </div>
   </div>

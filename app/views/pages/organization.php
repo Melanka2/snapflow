@@ -7,7 +7,6 @@
 </head>
 
 <body>
-
   <div class="topnav">
     <div class="test">
       <img src="<?php echo URLROOT ?>/public/images/logo new.png" alt="logo" width="100">
@@ -39,7 +38,7 @@
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
       <span class="fa fa-star checked"></span>
-      <p class="testimonial-company"><?php echo $organization->name; ?>  </p>
+      <p class="testimonial-company"><?php echo $organization->orname; ?>  </p>
     </div>
     <?php endforeach; ?>
   

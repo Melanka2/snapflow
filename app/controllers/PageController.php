@@ -1,4 +1,5 @@
 <?php
+require_once '../app/controllers/OrganizationController.php';
 
 class PageController extends Controller
 {
@@ -7,7 +8,7 @@ class PageController extends Controller
 
     public function __construct()
     {
-        $this->organizationController = $this->controller('OrganizationController');
+        $this->organizationController = new OrganizationController();
     }
 
     public function index()
@@ -41,28 +42,33 @@ class PageController extends Controller
     {
         $organizations = $this->organizationController->getNotAcceptedOrganizations();
         extract($organizations);
-        $this->view('pages/admintable',$organizations);
+        $this->view('pages/admintable', $organizations);
     }
 
     public function organization()
     {
-        $organizations = $this->organizationController->getOrganizations();
+        session_start();
+        if (!isset($_SESSION['data'])) {
+            header('Location: ' . URLROOT . '/PageController/homepage');
+        }
+        
+        $organizations = $_SESSION['data'];
         extract($organizations);
         $this->view('pages/organization', $organizations);
     }
-    
+
     public function photographerprofile()
     {
         $this->view('pages/photographerprofile');
     }
 
-     
+
     public function managerprofile()
     {
         $this->view('pages/managerprofile');
     }
 
-    
+
     public function packages()
     {
         $this->view('pages/packages');
@@ -99,6 +105,13 @@ class PageController extends Controller
    
 
 
+    public function paysuccessful()
+    {
+        $this->view('pages/paysuccessful');
+    }
 
-   
+    public function booking()
+    {
+        $this->view('pages/booking');
+    }
 }

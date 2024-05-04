@@ -3,20 +3,14 @@
 class Organization {
 
  private $db;
-    private static $instance;
 
-    private function __construct()
+
+    public function __construct()
     {
-        $this->db = new Database;
+        $this->db = new Database();
     }
 
-    public static function getInstance()
-    {
-        if (!isset(self::$instance)) {
-            self::$instance = new Organization();
-        }
-        return self::$instance;
-    }
+
 
     public  function getOrganizations()
     {
@@ -59,6 +53,21 @@ class Organization {
         $this->db->bind(':id', $data['id']);
         if ($this->db->execute()) {
             return true;
+        } else {
+            return false;
+        }
+    }
+
+
+    public function searchOrganization($data)
+    {
+
+        $this->db->query('SELECT * FROM organization INNER JOIN booking on organization.organi_id = booking.organi_id WHERE booking.event_date <> :date or event_type <> :type');
+        $this->db->bind(':date', $data['date']);
+        $this->db->bind(':type', $data['type']);
+        $rows = $this->db->resultSet();
+        if ($this->db->rowCount() > 0) {
+            return $rows;
         } else {
             return false;
         }
